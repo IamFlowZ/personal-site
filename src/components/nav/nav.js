@@ -22,9 +22,9 @@ export default function() {
     })
     return (
         <div id="navbar" onScroll={scrollFunc} style={{top: show ? "0": "-50px"}}>
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" className="navItem">Home</a>
+            <a href="#news" className="navItem">News</a>
+            <a href="#contact" className="navItem">Contact</a>
         </div> 
     )
 }

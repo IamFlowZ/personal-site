@@ -1,0 +1,10 @@
+#idk {
+    top: 255px;
+    position: relative;
+    width: 70%;
+    left: 15%;
+}
+
+#idk > p {
+    max-height: 200px;
+}
