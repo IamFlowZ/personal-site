@@ -1,10 +1,30 @@
-#idk {
-    top: 255px;
+.idk {
+    color: black;
+    /* box-shadow: 5px 5px black; */
+    top: 155px;
+    background-color: grey;
     position: relative;
     width: 70%;
+    border: 10px solid grey;
+    border-radius: 10px;
     left: 15%;
 }
 
-#idk > p {
+.idk > p {
     max-height: 200px;
+}
+
+.postBody {
+    height: 201px;
+    padding: 10px;
+    background-color: rgb(211, 211, 211);
+}
+
+.postTitle {
+    max-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }

@@ -9,9 +9,6 @@ function App() {
     <div className="App" >
       <Nav />
       <Post />
-      <header className="App-header" style={{marginTop:"200%"}}>
-          Learn React
-      </header>
     </div>
   );
 }
