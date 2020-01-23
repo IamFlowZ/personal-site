@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {FaHeart, FaShare, FaCaretDown} from 'react-icons/fa'
+import ReactMarkdown from 'react-markdown'
 import './post.css'
 
 function Post({item}) {
@@ -8,9 +9,11 @@ function Post({item}) {
         <>
             <div className="postTitle">
                 <h2>{item.title}</h2>
-                <h3>{item.date}</h3>
+                <p>{item.date}</p>
             </div>
-            <p className="postBody">{item.body}</p>
+            <div className="postBody">
+                <ReactMarkdown  source={item.body}/>
+            </div>
             <p style={{textAlign: "center", paddingTop:"10px"}}>read more</p>
             <div style={{display:"flex", justifyContent: "center"}}>
                 <FaCaretDown />
@@ -26,7 +29,20 @@ function Post({item}) {
 const thing = {
     title: "hello",
     date: "1/1/2020",
-    body: "is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for."
+    body: ` # Probably\nis it me your \nlooking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.`
 }
 
 function PostLoader() {

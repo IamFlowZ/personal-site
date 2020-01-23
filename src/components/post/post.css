@@ -6,6 +6,8 @@
     position: relative;
     width: 70%;
     border: 10px solid grey;
+    border-left: 0;
+    border-right: 0;
     border-radius: 10px;
     left: 15%;
 }
@@ -20,19 +22,26 @@
     text-overflow: ellipsis;
     padding: 10px;
     background-color: rgb(211, 211, 211);
-    /* background: linear-gradient(transparent 10px, rgba(255, 255, 255, 1)) */
+    background: linear-gradient(to top, #333, grey 25%, #fff 85%, grey 100%);
 }
-
-.postBody:after {
-    background: linear-gradient(rgba(0,0,0,0), #000);
+#text {
+    max-width: 200px;
+}
+.postBody * > code {
+    max-width: inherit;
 }
 
 .shareIcons {
     display: flex;
     justify-content: right;
+    margin-right: 20px;
+    top: -20px;
+    /* padding-bottom: 20px; */
 }
 
 .shareIcons > svg {
+    position: relative;
+    top: -5px;
     padding-left: 10px;
 }
 
