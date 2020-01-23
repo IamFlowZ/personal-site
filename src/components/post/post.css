@@ -16,8 +16,24 @@
 
 .postBody {
     height: 201px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 10px;
     background-color: rgb(211, 211, 211);
+    /* background: linear-gradient(transparent 10px, rgba(255, 255, 255, 1)) */
+}
+
+.postBody:after {
+    background: linear-gradient(rgba(0,0,0,0), #000);
+}
+
+.shareIcons {
+    display: flex;
+    justify-content: right;
+}
+
+.shareIcons > svg {
+    padding-left: 10px;
 }
 
 .postTitle {
