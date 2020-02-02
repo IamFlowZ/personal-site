@@ -1,28 +1,30 @@
 .idk {
     color: black;
-    /* box-shadow: 5px 5px black; */
+    list-style-type: none;
     top: 155px;
-    background-color: grey;
     position: relative;
     width: 70%;
-    border: 10px solid grey;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 10px;
     left: 15%;
 }
 
-.idk > p {
-    max-height: 200px;
+.idk > li {
+    border: 10px solid rgb(155, 155, 155);
+    border-left: 0;
+    border-right: 0;
+    border-radius: 10px;
+    background-color: rgb(156, 156, 156);
+    margin: 0 0 30px 0;
+    position: relative;
 }
 
 .postBody {
+    /* margin-bottom: 500px; */
     height: 201px;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 10px;
     background-color: rgb(211, 211, 211);
-    background: linear-gradient(to top, #333, grey 25%, #fff 85%, grey 100%);
+    background: linear-gradient(to top, #333, grey 25%, #fff 85%);
 }
 #text {
     max-width: 200px;

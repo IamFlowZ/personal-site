@@ -6,7 +6,7 @@ import './post.css'
 function Post({item}) {
     console.log(item)
     return (
-        <>
+        <li >
             <div className="postTitle">
                 <h2>{item.title}</h2>
                 <p>{item.date}</p>
@@ -21,8 +21,7 @@ function Post({item}) {
             <div className="shareIcons">
                 <FaHeart /><FaShare/>
             </div>
-            
-        </>
+        </li>
     )
 }
 
@@ -42,14 +41,19 @@ const thing = {
     is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
     is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
     is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
+    is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.
     is it me your looking for.is it me your looking for.is it me your looking for.is it me your looking for.`
 }
 
+const things = [thing, thing, thing, thing]
+
 function PostLoader() {
     return (
-        <div className="idk">
-            <Post item={thing}/>
-        </div>
+        <ul className="idk">
+            {things.map(thing => <Post item={thing}/>)}
+            
+        </ul>
     )
 }
 

@@ -1,4 +1,5 @@
   #navbar {
+    z-index: 99;
     display:flex;
     background-color: #333; /* Black background color */
     position: fixed; /* Make it stick/fixed */
@@ -7,6 +8,8 @@
     transition: top 0.3s; /* Transition effect when sliding down (and up) */
     flex: 1;
     justify-content: center;
+    align-items: center;
+    /* margin-left: 15%; */
   }
   
   /* Style the navbar links */
@@ -19,7 +22,16 @@
     text-decoration: none;
   }
   
+  #navbar input {
+    /* margin-right: auto; */
+    height: 25px;
+    margin-left: 5px;
+    width: 500px;
+  }
+
   #navbar a:hover {
     background-color: #ddd;
     color: black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
   }
