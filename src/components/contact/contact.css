@@ -1,0 +1,48 @@
+.contactContainer {
+    border-radius: 1em;
+    position: absolute;
+    top: 25vh;
+    margin-left: 15%;
+    height: 40%;
+    width: 70%;
+    background-color: #222222;
+    display: flex;
+    align-items: flex-start;
+}
+
+img {
+    /* position: relative; */
+    border-radius: 1em;
+    margin-right: 1em;
+    /* display: inline-block; */
+    z-index: 99;
+    height: 17em;
+    width: 17em;
+    margin-left: 2em;
+    margin-top: 2em;
+    background-color: white;
+}
+
+.bio {
+    position: relative;
+    margin-top: 2em;
+    color: white;
+}
+
+.contactSocial {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    display: flex;
+    margin-top: 1.3em;
+    color: white;
+}
+
+.contactSocial > p {
+    margin-right: 0.5em;
+}
+
+.contactSocial > img {
+    margin-right: 1em;
+}
