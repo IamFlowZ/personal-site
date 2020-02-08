@@ -7,6 +7,8 @@ import {
     Link
 } from 'react-router-dom'
 
+import favicon from './assets/personal/favicon.ico'
+
 import './components/nav/nav.css'
 import Post from './components/post/post'
 import Contact from './components/contact/contact'
@@ -34,8 +36,20 @@ function App() {
     <div className="App" >
       <Router>
           <ul id="navbar" style={{listStyleType:"none", top: show ? "0": "-50px"}} onScroll={scrollFunc}>
+              <img src={favicon} alt="my logo" style={{
+                  height:"35px", 
+                  top: "0", 
+                  width: "35px", 
+                  margin: 0, 
+                  marginRight: "1em", 
+                  marginLeft: "0.25em"
+                }}
+              ></img>
               <li className="navItem">
                   <Link to="/">Home</Link>
+              </li>
+              <li className="navItem">
+                  <Link to="/">Projects</Link>
               </li>
               <li className="navItem">
                   <Link to="/">Posts</Link>
