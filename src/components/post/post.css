@@ -1,3 +1,4 @@
+/* 4d5366, #66644d, #664d50 */
 .idk {
     color: black;
     list-style-type: none;
@@ -8,11 +9,11 @@
 }
 
 .idk > li {
-    border: 10px solid rgb(155, 155, 155);
+    border: 10px solid #66644d;
     border-left: 0;
     border-right: 0;
     border-radius: 10px;
-    background-color: rgb(156, 156, 156);
+    background-color: #66644d;
     margin: 0 0 30px 0;
     position: relative;
 }
@@ -24,7 +25,7 @@
     text-overflow: ellipsis;
     padding: 10px;
     background-color: rgb(211, 211, 211);
-    background: linear-gradient(to top, #333, grey 25%, #fff 85%);
+    background: linear-gradient(to top, #333, grey 15%, #fff 85%);
 }
 #text {
     max-width: 200px;
