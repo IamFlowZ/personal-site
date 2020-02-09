@@ -9,24 +9,25 @@
 }
 
 .idk > li {
-    border: 10px solid #66644d;
+    color: white;
+    border: 10px solid #222222;
     border-left: 0;
     border-right: 0;
     border-radius: 10px;
-    background-color: #66644d;
+    background-color: #222222;
     margin: 0 0 30px 0;
     position: relative;
 }
 
 .postBody {
-    /* margin-bottom: 500px; */
     height: 201px;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 10px;
-    background-color: rgb(211, 211, 211);
-    background: linear-gradient(to top, #333, grey 15%, #fff 85%);
+    color: black;
+    background: linear-gradient(to top, #333, white 5%, #66644d 99%);
 }
+
 #text {
     max-width: 200px;
 }
@@ -53,6 +54,12 @@
     display: flex;
     flex-wrap: wrap;
     flex: 1;
+    margin-left: 0.5em;
+    margin-bottom: 0.25em;
     padding-bottom: 5px;
     padding-left: 5px;
+}
+
+.postTitle > h2 {
+    font-size: 2em;
 }

@@ -1,4 +1,6 @@
 .contactContainer {
+    display: flex;
+    flex-flow: wrap;
     border-radius: 1em;
     position: absolute;
     top: 25vh;
