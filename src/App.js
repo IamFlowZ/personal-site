@@ -12,6 +12,7 @@ import favicon from './assets/personal/favicon.ico'
 import './components/nav/nav.css'
 import Post from './components/post/post'
 import Contact from './components/contact/contact'
+import Thing from './components/projects/projects'
 
 const scrollFunc = () => {
   console.log('i scrolled')
@@ -32,45 +33,14 @@ function App() {
           window.removeEventListener('scroll', handleScroll)
       }
   })
+  const selected = false
   return (
     <div className="App" >
-      <Router>
-          <ul id="navbar" style={{listStyleType:"none", top: show ? "0": "-50px"}} onScroll={scrollFunc}>
-              <img src={favicon} alt="my logo" style={{
-                  height:"35px", 
-                  top: "0", 
-                  width: "35px", 
-                  margin: 0, 
-                  marginRight: "1em", 
-                  marginLeft: "0.25em"
-                }}
-              ></img>
-              <li className="navItem">
-                  <Link to="/">Home</Link>
-              </li>
-              <li className="navItem">
-                  <Link to="/">Projects</Link>
-              </li>
-              <li className="navItem">
-                  <Link to="/">Posts</Link>
-              </li>
-              <li className="navItem">
-                  <Link to="/contact">Contact</Link>
-              </li>
-              <input type="text"></input>
-              <li className="navItem">
-                  <Link to="/">Search</Link>
-              </li>
-          </ul>
-          <Switch>
-              <Route path="/contact">
-                <Contact/>
-              </Route>
-              <Route path="/">
-                <Post />
-              </Route>
-          </Switch>
-      </Router>
+      <span className={`navDots ${selected ? null: 'selected'}`} style={{top: "45%"}}></span>
+      <span className="navDots" style={{top: "50%"}}></span>
+      <span className="navDots" style={{top: "75%"}}></span>
+      <Contact/>
+      <Thing />
     </div>
   );
 }

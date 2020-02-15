@@ -4,9 +4,8 @@ import ReactMarkdown from 'react-markdown'
 import './post.css'
 
 function Post({item}) {
-    console.log(item)
     return (
-        <li >
+        <li>
             <div className="postTitle">
                 <h2>{item.title}</h2>
                 <p>{item.date}</p>
@@ -17,9 +16,6 @@ function Post({item}) {
             <p style={{textAlign: "center", paddingTop:"10px"}}>read more</p>
             <div style={{display:"flex", justifyContent: "center"}}>
                 <FaCaretDown />
-            </div>
-            <div className="shareIcons">
-                <FaHeart /><FaShare/>
             </div>
         </li>
     )

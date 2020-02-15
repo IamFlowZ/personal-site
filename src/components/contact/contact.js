@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+
 import './contact.css'
 import profile from '../../assets/personal/me.png'
 import linkedIn from '../../assets/social/linkedIn.svg'
 import twitter from '../../assets/social/twitter.svg'
 import github from '../../assets/social/github.svg'
+
 
 export default function() {
     return (
@@ -21,7 +23,7 @@ export default function() {
             <div className="bio">
                 <h2>Dakota Lewallen</h2>
                 <p>Software Developer</p>
-                <p>Bio</p>
+                <p>I enjoy building healthy solutions to life's problems. A part of that is bringing the best tool for the job that's at hand, and that's what motivates me to be always evaluating and expanding my toolbox. If you'd like to see how I do that, check in here regularly and follow me through my social media links. </p>
             </div>
         </div>
     )
