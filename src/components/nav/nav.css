@@ -1,7 +1,7 @@
   #navbar {
     z-index: 99;
     display:flex;
-    background-color: #333; /* Black background color */
+    background-color: #001835; /* Black background color */
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
@@ -15,6 +15,7 @@
   
   /* Style the navbar links */
   #navbar a {
+    height: 5px;
     float: left;
     display: block;
     color: white;

@@ -2,8 +2,8 @@
     display: flex;
     flex-flow: wrap;
     border-radius: 1em;
-    position: absolute;
-    top: 25vh;
+    position: relative;
+    top: 15vh;
     margin-left: 15%;
     height: 40%;
     width: 70%;
@@ -13,10 +13,8 @@
 }
 
 img {
-    /* position: relative; */
     border-radius: 1em;
     margin-right: 1em;
-    /* display: inline-block; */
     z-index: 99;
     height: 17em;
     width: 17em;
@@ -27,8 +25,65 @@ img {
 
 .bio {
     position: relative;
+    /* max-width: 70%; */
+    max-height: 20em;
+    overflow: hidden;
     margin-top: 2em;
     color: white;
+}
+
+@media only screen and (min-width:1525px) {
+    .bio {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1524px) {
+    .bio {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+    .bio {
+        margin-left: 8em;
+        margin-bottom: 2em;
+        max-width: 60%;
+    }
+    img {
+        margin-left: 10em;
+    }
+    .contactSocial {
+        margin-left: 8em;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .bio {
+        margin-left: 2em;
+        margin-bottom: 2em;
+        max-width: 80%;
+    }
+    img {
+        margin-left: 5em;
+    }
+    .contactSocial {
+        margin-left: 4em;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .bio {
+        margin-left: 2em;
+        margin-bottom: 2em;
+        max-width: 80%;
+    }
+    img {
+        margin-left: 3em;
+    }
+    .contactSocial {
+        margin-left: 2em;
+    }
 }
 
 .contactSocial {
@@ -37,7 +92,8 @@ img {
     justify-content: center;
     position: relative; 
     display: flex;
-    margin-top: 1.3em;
+    margin-top: 0.55em;
+    margin-bottom: 0.75em;
     color: white;
 }
 

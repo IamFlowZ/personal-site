@@ -2,10 +2,22 @@
 .idk {
     color: black;
     list-style-type: none;
-    top: 155px;
+    top: 20em;
     position: relative;
     width: 70%;
     left: 15%;
+}
+.test {
+    display: flex;
+    padding-top: 0.7em;
+    justify-content: center;
+    align-content: center;
+    /* align-items: baseline; */
+    flex-wrap: nowrap;
+}
+
+.other {
+    align-self: flex-end;
 }
 
 .idk > li {
@@ -25,7 +37,7 @@
     text-overflow: ellipsis;
     padding: 10px;
     color: black;
-    background: linear-gradient(to top, #333, white 5%, #66644d 99%);
+    background: linear-gradient(to top, #333, white 5%, #5e83ba 99%);
 }
 
 #text {
