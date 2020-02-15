@@ -12,7 +12,7 @@ export default function() {
         <div className="contactContainer">
             <div>
                 <span></span>
-                <img src={profile} alt="my likeness"></img>
+                <img src={profile} alt="my likeness" id="profile"></img>
                 <div className="contactSocial">
                     <p>Find me on: </p>
                     <img src={linkedIn} alt="linked in logo" style={{margin: 0, height: "2em", width: "2em", marginRight: "1em"}}></img>

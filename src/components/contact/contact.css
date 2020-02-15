@@ -12,7 +12,7 @@
     align-items: flex-start;
 }
 
-img {
+#profile {
     border-radius: 1em;
     margin-right: 1em;
     z-index: 99;

@@ -1,0 +1,12 @@
+.carousel {
+    height: 40%;
+}
+
+.carousel.carousel-slider {
+    margin-left:15%;
+}
+
+.helpMe {
+    height: 250px;
+    width: 550px;
+}
