@@ -13,11 +13,11 @@ function SkillCarousel({src, i}) {
     )
 }
 
-export default function() {
+export default function({id}) {
     const [state, changeState] = useState(0)
     const onChange = (event) => changeState(event.target)
     return (
-        <div style={{marginTop:"37em", marginBottom:"37em"}}>
+        <div id={id} style={{marginBottom:"37em"}}>
             <Carousel arrows={true} value={state} onChange={onChange}>
                 <SkillCarousel src={aws} i={1}></SkillCarousel>
                 <SkillCarousel src={aws} i={2}></SkillCarousel>

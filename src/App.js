@@ -26,11 +26,18 @@ function App() {
   
   return (
     <div className="App" >
-      <span className={`navDots ${firstDot ? 'selected': null}`} style={{top: "45%"}}></span>
-      <span className={`navDots ${secondDot ? 'selected': null}`} style={{top: "50%"}}></span>
-      <span className={`navDots ${thirdDot ? 'selected': null}`} style={{top: "55%"}}></span>
+      <span className={`navDots${firstDot ? ' selected': ''}`} style={{top: "45%"}}>
+        <a href="#" style={{display:"inline-block", height:"15px", width: "15px"}}></a>
+      </span>
+      <span className={`navDots${secondDot ? ' selected': ''}`} style={{top: "50%"}}>
+        <a href="#skills" style={{display:"inline-block", height:"15px", width: "15px"}}></a>
+      </span>
+      <span className={`navDots${thirdDot ? ' selected': ''}`} style={{top: "55%"}}>
+        <a href="#projects" style={{display:"inline-block", height:"15px", width: "15px"}}></a>
+      </span>
       <Contact/>
-      <Thing />
+      <Thing id="skills"/>
+      <Thing id="projects"/>
     </div>
   );
 }
