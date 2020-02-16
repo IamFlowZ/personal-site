@@ -15,9 +15,9 @@ export default function() {
                 <img src={profile} alt="my likeness" id="profile"></img>
                 <div className="contactSocial">
                     <p>Find me on: </p>
-                    <img src={linkedIn} alt="linked in logo" style={{margin: 0, height: "2em", width: "2em", marginRight: "1em"}}></img>
-                    <img src={github} alt="github logo" style={{margin: 0, height: "2em", width: "2em", marginRight: "1em"}}></img>
-                    <img src={twitter} alt="twitter logo" style={{margin: 0, height: "2em", width: "2em"}}></img>
+                    <a href="https://www.linkedin.com/in/dakota-lewallen/"><img src={linkedIn} alt="linked in logo" style={{margin: 0, height: "2em", width: "2em", marginRight: "1em"}}></img></a>
+                    <a href="https://github.com/IamFlowZ/"><img src={github} alt="github logo" style={{margin: 0, height: "2em", width: "2em", marginRight: "1em"}}></img></a>
+                    <a href="https://twitter.com/FastFlowz"><img src={twitter} alt="twitter logo" style={{margin: 0, height: "2em", width: "2em"}}></img></a>
                 </div>
             </div>
             <div className="bio">

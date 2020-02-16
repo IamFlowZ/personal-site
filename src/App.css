@@ -1,6 +1,16 @@
+/* Color Palette 
+  Taken from: https://colorpalettes.net/color-palette-2326/
+  Dark: 091d36,
+  Medium-Dark: 3a4e7a,
+  Medium: 5e83ba,
+  Medium-Light: c2d2e9,
+  Light: f1f1f0
+*/
+
 * {
   margin: 0;
   padding: 0;
+  color: #f1f1f0;
 }
 
 body {
@@ -9,14 +19,14 @@ body {
 }
 
 .navDots {
-  background: rgba(33,88,157,1);
+  background: #5e83ba;
   display: inline-block;
   position: fixed;
   height: 15px;
   width: 15px;
   left: 50px;
   border-radius: 2em;
-  border: 2px solid white;
+  border: 2px solid #f1f1f0;
 }
 
 @media only screen and (max-width: 575px) {
@@ -28,7 +38,7 @@ body {
 .selected {
   /* background-color: #21589d; */ 
   background: rgba(33,88,157,1);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(33,88,157,1) 50%); 
+  background: radial-gradient(circle, rgba(241, 241, 240, 1) 0%, rgba(33,88,157,1) 50%); 
 }
 
 .App-header {

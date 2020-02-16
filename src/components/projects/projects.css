@@ -1,3 +1,19 @@
 .BrainhubCarousel__arrows {
     background-color: #5e83ba !important;
 }
+
+.carouselItem {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 25em;
+    width: 45em;
+    background-color: #3a4e7a;
+    box-shadow: inset 2px 5px 10px black;
+    border-radius: 1em;
+}
+
+.carouselItem > p {
+    margin-left: 2em;
+}

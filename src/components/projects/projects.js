@@ -8,7 +8,7 @@ import aws from "../../assets/social/aws.svg"
 
 function SkillCarousel({src, i}) {
     return (
-        <div style={{backgroundColor:"black", color: "white"}}>
+        <div className="carouselItem">
             <img src={src} alt="aws logo" style={{height: "250px", width:"550px", backgroundColor:"white"}}></img>
             <p>Thing {i}</p>
         </div>
