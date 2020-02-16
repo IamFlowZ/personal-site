@@ -25,13 +25,13 @@ function App() {
   return (
     <div className="App" >
       <span className={`navDots${firstDot ? ' selected': ''}`} style={{top: "45%"}}>
-        <a href="#" style={{display:"inline-block", height:"15px", width: "15px"}}></a>
+        <a href="#"></a>
       </span>
       <span className={`navDots${secondDot ? ' selected': ''}`} style={{top: "50%"}}>
-        <a href="#skills" style={{display:"inline-block", height:"15px", width: "15px"}}></a>
+        <a href="#skills"></a>
       </span>
       <span className={`navDots${thirdDot ? ' selected': ''}`} style={{top: "55%"}}>
-        <a href="#projects" style={{display:"inline-block", height:"15px", width: "15px"}}></a>
+        <a href="#projects"></a>
       </span>
       <Contact/>
       <Thing id="skills"/>
