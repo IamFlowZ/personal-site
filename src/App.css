@@ -5,7 +5,7 @@
 
 body {
   height: 100%;
-  background: #c2d2e9;
+  background: #091d36;
 }
 
 .navDots {
@@ -28,7 +28,7 @@ body {
 .selected {
   /* background-color: #21589d; */ 
   background: rgba(33,88,157,1);
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(33,88,157,1) 50%); 
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(33,88,157,1) 50%); 
 }
 
 .App-header {
