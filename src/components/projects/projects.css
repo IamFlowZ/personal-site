@@ -27,7 +27,13 @@
 }
 
 .carouselItem > p {
-    /* margin-left: 4em; */
     max-width: 500px;
-    /* padding-bottom: 1em; */
+}
+
+.fa-arrow-circle-right > path {
+    fill:#5e83ba;
+}
+
+.fa-arrow-circle-left > path {
+    fill:#5e83ba;
 }
