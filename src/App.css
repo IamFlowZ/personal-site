@@ -8,6 +8,8 @@
 */
 
 * {
+  font-weight: 600;
+  letter-spacing: 0.03em;
   margin: 0;
   padding: 0;
   color: #f1f1f0;
