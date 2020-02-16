@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react'
-import {FaHeart, FaShare, FaCaretDown} from 'react-icons/fa'
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import './post.css'
 
@@ -15,7 +14,7 @@ function Post({item}) {
             </div>
             <p style={{textAlign: "center", paddingTop:"10px"}}>read more</p>
             <div style={{display:"flex", justifyContent: "center"}}>
-                <FaCaretDown />
+                
             </div>
         </li>
     )
