@@ -3,7 +3,13 @@ import './App.css';
 
 import './components/nav/nav.css'
 import Contact from './components/contact/contact'
-import Thing from './components/projects/projects'
+import Carousel, {CarouselItem} from './components/projects/projects'
+
+import aws from "./assets/icons/social/aws.svg"
+import wozU from "./assets/icons/social/woz-u.jpg"
+import otherSkills from './assets/icons/personal/otherSkills.svg'
+
+const text = "I obtained my Certified Cloud Practioner certification through AWS in Feburary of 2020. I had been working with AWS professionally for around a year and felt that a certification was a good way to solidify my skillset with the provider."
 
 function App() {
   const [firstDot, setFirstDot] = useState(true)
@@ -21,7 +27,7 @@ function App() {
         window.removeEventListener('scroll', handleScroll)
     }
   })
-  
+
   return (
     <div className="App" >
       <span className={`navDots${firstDot ? ' selected': ''}`} style={{top: "45%"}}>
@@ -34,8 +40,16 @@ function App() {
         <a href="#projects"></a>
       </span>
       <Contact/>
-      <Thing id="skills"/>
-      <Thing id="projects"/>
+      <Carousel id="skills">
+        <CarouselItem src={aws} text={text}></CarouselItem>
+        <CarouselItem src={wozU} text={text}></CarouselItem>
+        <CarouselItem src={otherSkills} text={text}></CarouselItem>
+      </Carousel>
+      <Carousel id="projects">
+        <CarouselItem src={aws} text={text}></CarouselItem>
+        <CarouselItem src={wozU} text={text}></CarouselItem>
+        <CarouselItem src={otherSkills} text={text}></CarouselItem>
+      </Carousel>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react'
 
 import './contact.css'
-import profile from '../../assets/personal/me.png'
-import linkedIn from '../../assets/social/linkedIn.svg'
-import twitter from '../../assets/social/twitter.svg'
-import github from '../../assets/social/github.svg'
+import profile from '../../assets/icons/personal/me.png'
+import linkedIn from '../../assets/icons/social/linkedIn.svg'
+import twitter from '../../assets/icons/social/twitter.svg'
+import github from '../../assets/icons/social/github.svg'
 
 
 export default function() {
