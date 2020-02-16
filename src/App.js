@@ -5,23 +5,21 @@ import './components/nav/nav.css'
 import Contact from './components/contact/contact'
 import Thing from './components/projects/projects'
 
-const scrollFunc = () => {
-  console.log('i scrolled')
-}
-
 function App() {
   const [firstDot, setFirstDot] = useState(true)
   const [secondDot, setSecondDot] = useState(false)
   const [thirdDot, setThirdDot] = useState(false)
   useEffect(_ => {
-      const handleScroll = _ => {
-          setFirstDot(window.pageYOffset === 0)
-          setThirdDot(window.scrollMaxY === window.pageYOffset)
-      }
-      window.addEventListener('scroll', handleScroll)
-      return _ => {
-          window.removeEventListener('scroll', handleScroll)
-      }
+    const handleScroll = _ => {
+      const position = window.pageYOffset / window.scrollMaxY
+      setFirstDot(position < 0.3)
+      setSecondDot(position >= 0.3 && position < 0.75)
+      setThirdDot(position >= 0.75)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return _ => {
+        window.removeEventListener('scroll', handleScroll)
+    }
   })
   
   return (
