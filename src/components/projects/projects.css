@@ -12,7 +12,7 @@
     height: 27em;
     width: 45em;
     background-color: #3a4e7a;
-    box-shadow: inset 2px 5px 10px black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
     border-radius: 1em;
 }
 
@@ -24,6 +24,7 @@
     border-radius: 1em;
     background-color: white;
     padding: 1em;
+    /* border: 2px solid black; */
 }
 
 .carouselItem > p {
