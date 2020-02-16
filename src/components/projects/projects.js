@@ -9,8 +9,8 @@ import aws from "../../assets/social/aws.svg"
 function SkillCarousel({src, i}) {
     return (
         <div className="carouselItem">
-            <img src={src} alt="aws logo" style={{height: "250px", width:"550px", backgroundColor:"white"}}></img>
-            <p>Thing {i}</p>
+            <img src={src} alt="aws logo"></img>
+            <p>I obtained my Certified Cloud Practioner certification through AWS in Feburary of 2020. I had been working with AWS professionally for around a year and felt that a certification was a good way to solidify my skillset with the provider.</p>
         </div>
     )
 }

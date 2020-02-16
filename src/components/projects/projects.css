@@ -6,7 +6,7 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 25em;
     width: 45em;
     background-color: #3a4e7a;
@@ -14,6 +14,17 @@
     border-radius: 1em;
 }
 
+.carouselItem > img {
+    height: 250px;
+    width: 550px;
+    margin-top: 1em;
+    margin-left: 0.25em;
+    border-radius: 1em;
+    background-color: white;
+    padding: 1em;
+}
+
 .carouselItem > p {
-    margin-left: 2em;
+    /* margin-left: 4em; */
+    max-width: 500px;
 }
