@@ -30,7 +30,7 @@ export default function({id, children}) {
                 addArrowClickHandler={true}
                 value={state} 
                 onChange={onChange}
-                autoPlay={3000}
+                autoPlay={4000}
                 stopAutoPlayOnHover={true}
                 infinite={true}
                 slides={children}>

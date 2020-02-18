@@ -1,0 +1,2 @@
+const text = `From the summer of 2017 until that fall, I attended [WozU's Full Stack Web Development Training Program](https://woz-u.com/learn/software-development/full-stack-web-dev/). In it I learned programming fundamentals, how to develop web applications with Node.js and the .Net Framework. As well as how to deploy those applications to AWS using .`
+export default text

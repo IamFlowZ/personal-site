@@ -5,11 +5,18 @@ import './components/nav/nav.css'
 import Contact from './components/contact/contact'
 import Carousel, {CarouselItem} from './components/projects/projects'
 
-import aws from "./assets/icons/social/aws.svg"
-import wozU from "./assets/icons/social/woz-u.jpg"
-import otherSkills from './assets/icons/personal/otherSkills.svg'
+import awsLogo from "./assets/icons/social/aws.svg"
+import wozULogo from "./assets/icons/social/woz-u.jpg"
+import otherSkillsLogo from './assets/icons/personal/otherSkills.svg'
 
-const text = "I obtained my Certified Cloud Practioner certification through AWS in Feburary of 2020. I had been working with AWS professionally for around a year and felt that a certification was a good way to solidify my skillset with the provider."
+import awsText from './assets/markdown/skills/aws'
+import schoolText from './assets/markdown/skills/web-dev'
+import otherText from './assets/markdown/skills/other'
+
+import dicewareText from './assets/markdown/projects/diceware'
+import dndText from './assets/markdown/projects/dnd-graphql'
+import shortcutText from './assets/markdown/projects/shortcut'
+import personalText from './assets/markdown/projects/personal-site'
 
 function App() {
   const [firstDot, setFirstDot] = useState(true)
@@ -41,14 +48,15 @@ function App() {
       </span>
       <Contact/>
       <Carousel id="skills">
-        <CarouselItem src={aws} text={text}></CarouselItem>
-        <CarouselItem src={wozU} text={text}></CarouselItem>
-        <CarouselItem src={otherSkills} text={text}></CarouselItem>
+        <CarouselItem src={awsLogo} text={awsText}></CarouselItem>
+        <CarouselItem src={wozULogo} text={schoolText}></CarouselItem>
+        <CarouselItem src={otherSkillsLogo} text={otherText}></CarouselItem>
       </Carousel>
       <Carousel id="projects">
-        <CarouselItem src={aws} text={text}></CarouselItem>
-        <CarouselItem src={wozU} text={text}></CarouselItem>
-        <CarouselItem src={otherSkills} text={text}></CarouselItem>
+        <CarouselItem src={awsLogo} text={dicewareText}></CarouselItem>
+        <CarouselItem src={wozULogo} text={dndText}></CarouselItem>
+        <CarouselItem src={otherSkillsLogo} text={shortcutText}></CarouselItem>
+        <CarouselItem src={otherSkillsLogo} text={personalText}></CarouselItem>
       </Carousel>
     </div>
   );
