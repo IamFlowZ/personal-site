@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
+  aws-s3: circleci/aws-s3@1.0.11
 jobs:
   build-and-test:
     executor:
@@ -11,6 +12,14 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+      - aws-s3/sync:
+          from: build
+          to: 's3://personal-site-prod'
+          overwrite: true
+          arguments: |
+                --acl public-read \
+                --cache-control "max-age=86400"
+
 workflows:
     build-and-test:
       jobs:
