@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
-import './components/nav/nav.css'
+// import './components/nav/nav.css'
 import Contact from './components/contact/contact'
 import Carousel, {CarouselItem} from './components/projects/projects'
 
@@ -47,16 +47,18 @@ function App() {
         <a href="#projects">Projects</a>
       </span>
       <Contact/>
+      <h1>Certifications & Skills</h1> 
       <Carousel id="skills">
         <CarouselItem src={awsLogo} text={awsText}></CarouselItem>
         <CarouselItem src={wozULogo} text={schoolText}></CarouselItem>
         <CarouselItem src={otherSkillsLogo} text={otherText}></CarouselItem>
       </Carousel>
+      <h1>Projects</h1>
       <Carousel id="projects">
-        <CarouselItem src={awsLogo} text={dicewareText}></CarouselItem>
-        <CarouselItem src={wozULogo} text={dndText}></CarouselItem>
-        <CarouselItem src={otherSkillsLogo} text={shortcutText}></CarouselItem>
-        <CarouselItem src={otherSkillsLogo} text={personalText}></CarouselItem>
+        <CarouselItem text={dicewareText}></CarouselItem>
+        <CarouselItem text={dndText}></CarouselItem>
+        <CarouselItem text={shortcutText}></CarouselItem>
+        <CarouselItem text={personalText}></CarouselItem>
       </Carousel>
     </div>
   );

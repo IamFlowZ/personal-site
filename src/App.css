@@ -18,6 +18,16 @@ body {
   background: #091d36;
 }
 
+.App {
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
 .navDots {
   background: #5e83ba;
   display: inline-block;

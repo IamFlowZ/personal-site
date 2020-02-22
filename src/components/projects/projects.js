@@ -12,8 +12,8 @@ import './projects.css'
 
 export function CarouselItem({src, text}) {
     return (
-        <div className="carouselItem">
-            <img src={src} alt="logo"></img>
+        <div className={`carouselItem${src ? ' hasImg': ''}`}>
+            {src ? <img src={src} alt="logo"></img>: ''}
             <ReactMarkdown source={text}/>
         </div>
     )
@@ -23,7 +23,7 @@ export default function({id, children}) {
     const [state, changeState] = useState(0)
     const onChange = (event) => changeState(event.target)
     return (
-        <div id={id} style={{marginBottom:"20em", width: '70%', marginLeft:"15%"}}>
+        <div id={id} className="carousel" style={{marginBottom:"20em", width: '100%', position: 'relative'}}>
             <Carousel 
                 arrowLeft={<FontAwesomeIcon className="arrows" icon={faArrowCircleLeft} size="3x"/>}
                 arrowRight={<FontAwesomeIcon className="arrows" icon={faArrowCircleRight} size="3x"/>}
