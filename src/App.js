@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
-// import './components/nav/nav.css'
 import Contact from './components/contact/contact'
 import Carousel, {CarouselItem} from './components/projects/projects'
 

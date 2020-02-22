@@ -61,7 +61,6 @@ body {
 }
 
 .selected {
-  /* background-color: #21589d; */ 
   background: rgba(33,88,157,1);
   background: radial-gradient(circle, rgba(241, 241, 240, 1) 0%, rgba(33,88,157,1) 50%); 
 }
