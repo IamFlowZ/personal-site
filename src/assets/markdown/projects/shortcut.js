@@ -1,2 +1,2 @@
-const text = ``
+const text = `# [Shortcut CLI](https://github.com/IamFlowZ/short-cut-go)\n Is a CLI I developed that allows the user to create environment variables that relate to paths within their machine`
 export default text
