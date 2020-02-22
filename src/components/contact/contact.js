@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 
 import './contact.css'
 import profile from '../../assets/icons/personal/me.png'
@@ -9,7 +9,7 @@ import github from '../../assets/icons/social/github.svg'
 
 export default function() {
     return (
-        <div className="contactContainer">
+        <div className="contactContainer" id="contact" >
             <div>
                 <span></span>
                 <img src={profile} alt="my likeness" id="profile"></img>

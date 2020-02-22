@@ -31,8 +31,16 @@
     max-width: 500px;
 }
 
+.fa-arrow-circle-right {
+    cursor: pointer;
+}
+
 .fa-arrow-circle-right > path {
     fill:#5e83ba;
+}
+
+.fa-arrow-circle-left {
+    cursor: pointer;
 }
 
 .fa-arrow-circle-left > path {
