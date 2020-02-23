@@ -38,16 +38,11 @@ function App() {
 
   return (
     <div className="App" >
-      <NavDot state={firstDot} title="Contact" top="45%"/>
-      {/* <span className={`navDots${firstDot ? ' selected': ''}`} style={{top: "45%"}}>
-        <a href="#contact">Contact</a>
-      </span> */}
-      <span className={`navDots${secondDot ? ' selected': ''}`} style={{marginTop: "1em"}}>
-        <a href="#skills">Skills</a>
-      </span>
-      <span className={`navDots${thirdDot ? ' selected': ''}`} style={{top: "55%"}}>
-        <a href="#projects">Projects</a>
-      </span>
+      <ol style={{listStyleType:"none"}}>
+        <li><NavDot state={firstDot} title="Contact" top="45%"/></li>
+        <li><NavDot state={secondDot} title="Skills" top="50%"/></li>
+        <li><NavDot state={thirdDot} title="Projects" top="55%"/></li>
+      </ol>
       <Contact/>
       <Carousel id="skills" title="Certifications & Skills">
         <CarouselItem src={awsLogo} text={awsText}></CarouselItem>
