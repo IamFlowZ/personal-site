@@ -4,16 +4,31 @@
     border-radius: 2em !important;
 }
 
+.carousel {
+    margin-bottom: 20em;
+    width: 100%;
+    position: relative;
+}
+
 .carouselItem {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    height: 27em;
+    height: 15em;
     width: 45em;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-content: space-evenly;
+    align-items: flex-start;
     background-color: #3a4e7a;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
     border-radius: 1em;
+}
+
+.hasImg {
+    height: 29em;
+    width: 45em;
+    align-items: flex-start;
+    align-content: stretch;
 }
 
 .carouselItem > img {
@@ -27,12 +42,28 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
 }
 
+.carouselItem > h2 {
+    margin-top: 0.5em;
+    align-self: flex-start;
+    /* margin-right: 1em; */
+}
+
 .carouselItem > p {
-    max-width: 500px;
+    max-width: 575px;
+    /* margin-left: 4em; */
+    /* margin-bottom: 1em; */
+}
+
+.fa-arrow-circle-right {
+    cursor: pointer;
 }
 
 .fa-arrow-circle-right > path {
     fill:#5e83ba;
+}
+
+.fa-arrow-circle-left {
+    cursor: pointer;
 }
 
 .fa-arrow-circle-left > path {

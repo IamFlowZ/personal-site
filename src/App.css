@@ -8,8 +8,6 @@
 */
 
 * {
-  font-weight: 600;
-  letter-spacing: 0.03em;
   margin: 0;
   padding: 0;
   color: #f1f1f0;
@@ -20,40 +18,14 @@ body {
   background: #091d36;
 }
 
-.navDots {
-  background: #5e83ba;
-  display: inline-block;
-  position: fixed;
-  height: 20px;
-  width: 20px;
-  left: 50px;
-  border-radius: 2em;
-  border: 2px solid #f1f1f0;
-}
-
-.navDots > a{
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-}
-
-@media only screen and (max-width: 575px) {
-  .navDots {
-    left: 25px;
-    height: 15px;
-    width: 15px;
-  }
-
-  .navDots > a{
-    height: 15px;
-    width: 15px;
-  }
-}
-
-.selected {
-  /* background-color: #21589d; */ 
-  background: rgba(33,88,157,1);
-  background: radial-gradient(circle, rgba(241, 241, 240, 1) 0%, rgba(33,88,157,1) 50%); 
+.App {
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .App-header {

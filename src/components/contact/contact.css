@@ -1,16 +1,13 @@
 .contactContainer {
+    position: relative;
     display: flex;
     flex-flow: wrap;
-    border-radius: 1em;
-    position: relative;
-    top: 15vh;
-    margin-left: 15%;
-    margin-bottom: 25em;
-    height: 70%;
-    width: 70%;
-    background-color: #3a4e7a;
-    display: flex;
     align-items: flex-start;
+    top: 15vh;
+    height: 70%;
+    border-radius: 1em;
+    margin-bottom: 25em;
+    background-color: #3a4e7a;
     border: 1px solid white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
 }
@@ -24,16 +21,26 @@
     width: 17em;
     margin-left: 2em;
     margin-top: 2em;
+    margin-bottom: 2em;
     background-color: white;
 }
 
 .bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     position: relative;
-    /* max-width: 70%; */
+    height: 17em;
+    max-width: 100%;
+    /* margin-right: 2em; */
     max-height: 20em;
     overflow: hidden;
     margin-top: 2em;
     color: white;
+}
+
+.bio p {
+    margin-right: 2em;
 }
 
 @media only screen and (min-width:1525px) {
@@ -91,13 +98,14 @@
 }
 
 .contactSocial {
+    /* align-self: flex-end; */
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative; 
     display: flex;
-    margin-top: 0.55em;
-    margin-bottom: 0.75em;
+    /* margin-top: 5em; */
+    /* margin-bottom: 0.75em; */
     color: white;
 }
 
