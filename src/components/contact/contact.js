@@ -14,7 +14,7 @@ export default function() {
             <div className="bio">
                 <h2>Hi, I'm Dakota Lewallen.</h2>
                 <p>I'm a Software Developer.</p>
-                <p>I enjoy building inclusive solutions to life's problems.  </p>
+                <p>I enjoy building inclusively effective solutions to complex issues, by employing concise and collabritive technologies.  </p>
 
                 <div className="contactSocial">
                     <p>Find me on: </p>

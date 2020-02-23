@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App" >
       <span className={`navDots${firstDot ? ' selected': ''}`} style={{top: "45%"}}>
-        <a href="#contact">Top</a>
+        <a href="#contact">Contact</a>
       </span>
       <span className={`navDots${secondDot ? ' selected': ''}`} style={{top: "50%"}}>
         <a href="#skills">Skills</a>
@@ -46,14 +46,12 @@ function App() {
         <a href="#projects">Projects</a>
       </span>
       <Contact/>
-      <h1 style={{marginBottom: '0.25em'}}>Certifications & Skills</h1> 
-      <Carousel id="skills">
+      <Carousel id="skills" title="Certifications & Skills">
         <CarouselItem src={awsLogo} text={awsText}></CarouselItem>
         <CarouselItem src={wozULogo} text={schoolText}></CarouselItem>
         <CarouselItem src={otherSkillsLogo} text={otherText}></CarouselItem>
       </Carousel>
-      <h1 style={{marginBottom: '0.25em'}}>Projects</h1>
-      <Carousel id="projects">
+      <Carousel id="projects" title="Projects">
         <CarouselItem text={dicewareText}></CarouselItem>
         <CarouselItem text={dndText}></CarouselItem>
         <CarouselItem text={shortcutText}></CarouselItem>
