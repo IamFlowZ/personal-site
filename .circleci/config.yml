@@ -4,9 +4,6 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
   build-and-test:
-    branches:
-      only:
-        - master
     executor:
       name: node/default
     working_directory: ~/repo
@@ -26,6 +23,9 @@ jobs:
                 --cache-control "max-age=86400"
 
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  build-and-test:
+    jobs:
+      - branches:
+          only:
+            - master
+      - build-and-test
