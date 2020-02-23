@@ -1,17 +1,13 @@
 .contactContainer {
+    position: relative;
     display: flex;
     flex-flow: wrap;
-    border-radius: 1em;
-    position: relative;
-    top: 15vh;
-    /* margin-left: 15%; */
-    /* margin-right: 10em; */
-    margin-bottom: 25em;
-    height: 70%;
-    /* width: 70%; */
-    background-color: #3a4e7a;
-    display: flex;
     align-items: flex-start;
+    top: 15vh;
+    height: 70%;
+    border-radius: 1em;
+    margin-bottom: 25em;
+    background-color: #3a4e7a;
     border: 1px solid white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
 }

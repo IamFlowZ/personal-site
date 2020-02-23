@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
+import NavDot from './components/navDot/navDot'
+
 import Contact from './components/contact/contact'
 import Carousel, {CarouselItem} from './components/project/project'
 
@@ -36,10 +38,11 @@ function App() {
 
   return (
     <div className="App" >
-      <span className={`navDots${firstDot ? ' selected': ''}`} style={{top: "45%"}}>
+      <NavDot state={firstDot} title="Contact" top="45%"/>
+      {/* <span className={`navDots${firstDot ? ' selected': ''}`} style={{top: "45%"}}>
         <a href="#contact">Contact</a>
-      </span>
-      <span className={`navDots${secondDot ? ' selected': ''}`} style={{top: "50%"}}>
+      </span> */}
+      <span className={`navDots${secondDot ? ' selected': ''}`} style={{marginTop: "1em"}}>
         <a href="#skills">Skills</a>
       </span>
       <span className={`navDots${thirdDot ? ' selected': ''}`} style={{top: "55%"}}>

@@ -9,7 +9,7 @@ import github from '../../assets/icons/social/github.svg'
 
 export default function() {
     return (
-        <div className="contactContainer" id="contact" >
+        <div className="contactContainer" id="Contact" >
             <img src={profile} alt="my likeness" id="profile"></img>
             <div className="bio">
                 <h2>Hi, I'm Dakota Lewallen.</h2>
