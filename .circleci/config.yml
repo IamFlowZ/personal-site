@@ -4,6 +4,9 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
   build-and-test:
+    branches:
+      only:
+        - master
     executor:
       name: node/default
     working_directory: ~/repo
