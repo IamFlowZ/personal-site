@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 
 import Contact from './components/contact/contact'
-import Carousel, {CarouselItem} from './components/projects/projects'
+import Carousel, {CarouselItem} from './components/project/project'
 
 import awsLogo from "./assets/icons/social/aws.svg"
 import wozULogo from "./assets/icons/social/woz-u.jpg"
@@ -46,13 +46,13 @@ function App() {
         <a href="#projects">Projects</a>
       </span>
       <Contact/>
-      <h1>Certifications & Skills</h1> 
+      <h1 style={{marginBottom: '0.25em'}}>Certifications & Skills</h1> 
       <Carousel id="skills">
         <CarouselItem src={awsLogo} text={awsText}></CarouselItem>
         <CarouselItem src={wozULogo} text={schoolText}></CarouselItem>
         <CarouselItem src={otherSkillsLogo} text={otherText}></CarouselItem>
       </Carousel>
-      <h1>Projects</h1>
+      <h1 style={{marginBottom: '0.25em'}}>Projects</h1>
       <Carousel id="projects">
         <CarouselItem text={dicewareText}></CarouselItem>
         <CarouselItem text={dndText}></CarouselItem>

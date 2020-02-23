@@ -8,12 +8,15 @@ import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import '@brainhubeu/react-carousel/lib/style.css';
 import Carousel from '@brainhubeu/react-carousel'
 
-import './projects.css'
+import './project.css'
 
 export function CarouselItem({src, text}) {
     return (
         <div className={`carouselItem${src ? ' hasImg': ''}`}>
-            {src ? <img src={src} alt="logo"></img>: ''}
+            {src ? 
+                <img src={src} alt="logo"></img>: 
+                ''
+            }
             <ReactMarkdown source={text}/>
         </div>
     )
