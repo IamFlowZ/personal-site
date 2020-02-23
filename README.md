@@ -1,6 +1,6 @@
 # Portfolio
-This is my personal [JAMStack](https://jamstack.org/) site.
 ![IamFlowZ](https://circleci.com/gh/IamFlowZ/personal-site.svg?style=svg)
+This is my personal [JAMStack](https://jamstack.org/) site.
 
 # Built With
 * [React](https://reactjs.org)
