@@ -44,12 +44,12 @@ function App() {
         <li><NavDot state={thirdDot} title="Projects" top="55%"/></li>
       </ol>
       <Contact/>
-      <Carousel id="skills" title="Certifications & Skills">
+      <Carousel id="Skills" title="Certifications & Skills">
         <CarouselItem src={awsLogo} text={awsText}></CarouselItem>
         <CarouselItem src={wozULogo} text={schoolText}></CarouselItem>
         <CarouselItem src={otherSkillsLogo} text={otherText}></CarouselItem>
       </Carousel>
-      <Carousel id="projects" title="Projects">
+      <Carousel id="Projects" title="Projects">
         <CarouselItem text={dicewareText}></CarouselItem>
         <CarouselItem text={dndText}></CarouselItem>
         <CarouselItem text={shortcutText}></CarouselItem>

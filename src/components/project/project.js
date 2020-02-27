@@ -27,8 +27,8 @@ export default function({id, children, title}) {
     const onChange = (event) => changeState(event.target)
     return (
         <>
-            <h1 id={id} style={{marginBottom: '0.25em', paddingTop: '1em'}}>{title}</h1>
-            <div className="carousel" style={{marginBottom:"20em", width: '100%', position: 'relative', height: '32em'}}>
+            <h1 id={id}>{title}</h1>
+            <div className="carousel" style={{width: '100%', position: 'relative', height: '32em'}}>
                 <Carousel 
                     arrowLeft={<FontAwesomeIcon className="arrows" icon={faArrowCircleLeft} size="3x"/>}
                     arrowRight={<FontAwesomeIcon className="arrows" icon={faArrowCircleRight} size="3x"/>}

@@ -2,6 +2,12 @@
     background-color: #5e83ba !important;
     display: inline-block;
     border-radius: 2rem !important;
+    
+}
+
+.BrainhubCarouselItem {
+    padding: 1em;
+    /* padding-top: 0; */
 }
 
 .carousel {
@@ -71,7 +77,14 @@
 @media only screen and (max-width:1100px) {
     .hasImg {
         height: 32rem;
-        width: 80%;
+        width: 97%;
+        
+    }
+    .carousel {
+        margin-bottom: 15rem;
+    }
+    .carouselItem {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1), 0 3px 10px 0 rgba(0, 0, 0, 1);
     }
 }
 
@@ -82,7 +95,17 @@
 }
 
 @media only screen and (max-width:550px) {
+    .carousel {
+        width: 50rem;
+    }
     .hasImg {
         height: 40rem;
     }
 }
+
+@media only screen and (max-width:450px) {
+    .hasImg {
+        height: 42rem;
+    }
+}
+
