@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="App" >
-      <ol style={{listStyleType:"none"}}>
+      <ol style={{listStyleType:"none", visibility: window.innerWidth < 500 ? "hidden": "visible"}}>
         <li><NavDot state={firstDot} title="Contact" top="45%"/></li>
         <li><NavDot state={secondDot} title="Skills" top="50%"/></li>
         <li><NavDot state={thirdDot} title="Projects" top="55%"/></li>

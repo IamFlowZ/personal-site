@@ -28,7 +28,7 @@ export default function({id, children, title}) {
     return (
         <>
             <h1 id={id}>{title}</h1>
-            <div className="carousel" style={{width: '100%', position: 'relative', height: '32em'}}>
+            <div className="carousel" style={{width: '100%', position: 'relative'}}>
                 <Carousel 
                     arrowLeft={<FontAwesomeIcon className="arrows" icon={faArrowCircleLeft} size="3x"/>}
                     arrowRight={<FontAwesomeIcon className="arrows" icon={faArrowCircleRight} size="3x"/>}
