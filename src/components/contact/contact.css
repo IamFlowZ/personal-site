@@ -5,8 +5,8 @@
     align-items: flex-start;
     top: 15vh;
     height: 70%;
-    border-radius: 1em;
-    margin-bottom: 25em;
+    border-radius: 1rem;
+    margin-bottom: 25rem;
     background-color: #3a4e7a;
     border: 1px solid white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
@@ -14,14 +14,14 @@
 
 #profile {
     border: 1px solid white;
-    border-radius: 1em;
-    margin-right: 1em;
+    border-radius: 1rem;
+    margin-right: 1rem;
     z-index: 99;
-    height: 17em;
-    width: 17em;
-    margin-left: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    height: 17rem;
+    width: 17rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     background-color: white;
 }
 
@@ -30,17 +30,17 @@
     flex-direction: column;
     justify-content: space-evenly;
     position: relative;
-    height: 17em;
+    height: 17rem;
     max-width: 100%;
-    /* margin-right: 2em; */
-    max-height: 20em;
+    /* margin-right: 2rem; */
+    max-height: 20rem;
     overflow: hidden;
-    margin-top: 2em;
+    margin-top: 2rem;
     color: white;
 }
 
 .bio p {
-    margin-right: 2em;
+    margin-right: 2rem;
 }
 
 @media only screen and (min-width:1525px) {
@@ -57,62 +57,62 @@
 
 @media only screen and (max-width: 925px) {
     .bio {
-        margin-left: 8em;
-        margin-bottom: 2em;
+        margin-left: 8rem;
+        margin-bottom: 2rem;
         max-width: 60%;
     }
     img {
-        margin-left: 10em;
+        margin-left: 10rem;
     }
     .contactSocial {
-        margin-left: 8em;
+        margin-left: 8rem;
     }
 }
 
 @media only screen and (max-width: 775px) {
     .bio {
-        margin-left: 2em;
-        margin-bottom: 2em;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
         max-width: 80%;
     }
     img {
-        margin-left: 5em;
+        margin-left: 5rem;
     }
     .contactSocial {
-        margin-left: 4em;
+        margin-left: 4rem;
     }
 }
 
 @media only screen and (max-width: 575px) {
     .bio {
-        margin-left: 2em;
-        margin-bottom: 2em;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
         max-width: 80%;
     }
     img {
-        margin-left: 3em;
+        margin-left: 3rem;
     }
     .contactSocial {
-        margin-left: 2em;
+        margin-left: 2rem;
     }
 }
 
 .contactSocial {
     /* align-self: flex-end; */
     align-content: center;
-    align-items: center;
+    align-itrems: center;
     justify-content: flex-start;
     position: relative; 
     display: flex;
-    /* margin-top: 5em; */
-    /* margin-bottom: 0.75em; */
+    /* margin-top: 5rem; */
+    /* margin-bottom: 0.75rem; */
     color: white;
 }
 
 .contactSocial > p {
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 .contactSocial > img {
-    margin-right: 1em;
+    margin-right: 1rem;
 }
