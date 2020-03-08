@@ -33,7 +33,7 @@
     height: 29rem;
     width: 45rem;
     align-items: flex-start;
-    align-content: stretch;
+    align-content: flex-start;
 }
 
 .carouselItem > img {
@@ -48,11 +48,19 @@
 
 .carouselItem > h2 {
     margin-top: 0.5rem;
+    border-radius: 0.5rem;
     align-self: flex-start;
+    padding: 0.5rem;
+    background-color: #5e83ba;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35), 0 3px 10px 0 rgba(0, 0, 0, 0.35);
 }
 
 .carouselItem > p {
+    
     max-width: 80%;
+}
+
+.hasImg > p {
+    margin-top: 1rem;
 }
 
 .fa-arrow-circle-right {
@@ -73,9 +81,11 @@
 
 @media only screen and (max-width:1100px) {
     .hasImg {
-        height: 32rem;
+        height: 30rem;
         width: 97%;
-        
+    }
+    .hasImg > p {
+        margin-top: 2rem;
     }
     .carousel {
         margin-bottom: 15rem;
@@ -97,16 +107,19 @@
     }
 }
 
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 750px) {
+    .hasImg {
+        height: 32rem;
+    }
     .hasImg > img {
         width: 350px;
+    }
+    .hasImg > p {
+        margin-top: 2rem;
     }
 }
 
 @media only screen and (max-width:700px) {
-    .hasImg {
-        height: 36rem;
-    }
     .carousel {
         margin-bottom: 8rem;
     }
@@ -115,6 +128,9 @@
 @media only screen and (max-width: 600px) {
     .carouselItem {
         height: 20rem;
+    }
+    .hasImg {
+        height: 32rem;
     }
     .BrainhubCarouselItem {
         padding: 4em;
@@ -125,13 +141,7 @@
     }
     .hasImg > img {
         padding: 5px;
-        width: 270px;
-    }
-}
-
-@media only screen and (max-width:550px) {
-    .hasImg {
-        height: 40rem;
+        width: 350px;
     }
 }
 
@@ -143,7 +153,10 @@
 
 @media only screen and (max-width:450px) {
     .hasImg {
-        height: 42rem;
+        height: 38rem;
+    }
+    .hasImg > img {
+        width: 275px;
     }
 }
 
