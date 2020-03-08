@@ -159,9 +159,3 @@
         width: 275px;
     }
 }
-
-@media only screen and (max-width: 375px) {
-    .carouselItem {
-        /* height: 22rem; */
-    }
-}
