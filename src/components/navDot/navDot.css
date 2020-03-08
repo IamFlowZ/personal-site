@@ -3,11 +3,11 @@
     display: inline-block;
     position: fixed;
     top: 50%;
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
     left: 50px;
     border-radius: 2rem;
-    border: 2px solid #f1f1f0;
+    /* border: 2px solid #f1f1f0; */
     /* text-indent: -9999px; */
   }
   
@@ -29,20 +29,20 @@
     }
   }
 
-  @media only screen and (max-width: 575px) {
+  @media only screen and (max-width: 700px) {
     .navDots {
-      left: 25px;
-      height: 15px;
-      width: 15px;
+      left: 30px;
+      height: 20px;
+      width: 20px;
     }
   
     .navDots > a{
-      height: 15px;
-      width: 15px;
+      height: 20px;
+      width: 20px;
     }
   }
   
   .selected {
     background: rgba(33,88,157,1);
-    background: radial-gradient(circle, rgba(241, 241, 240, 1) 0%, rgba(33,88,157,1) 50%); 
+    background: radial-gradient(circle, #f1f1f0 0%, #5e83ba 50%); 
   }
