@@ -25,10 +25,10 @@ function App() {
   const [thirdDot, setThirdDot] = useState(false)
   useEffect(_ => {
     const handleScroll = _ => {
-      const position = window.pageYOffset / window.scrollMaxY
-      setFirstDot(position < 0.3)
-      setSecondDot(position >= 0.3 && position < 0.75)
-      setThirdDot(position >= 0.75)
+      const position = window.pageYOffset / document.body.scrollHeight
+      setFirstDot(position < 0.2)
+      setSecondDot(position >= 0.2 && position < 0.5)
+      setThirdDot(position >= 0.5)
     }
     window.addEventListener('scroll', handleScroll)
     return _ => {
