@@ -1,6 +1,7 @@
 # Portfolio
 ![IamFlowZ](https://circleci.com/gh/IamFlowZ/personal-site.svg?style=svg)
 This is my personal [JAMStack](https://jamstack.org/) site.
+[dakotalewallen.me](dakotalewallen.me)
 
 # Built With
 * [React](https://reactjs.org)
