@@ -1,2 +1,2 @@
-const text = `From the summer of 2017 until that fall, I attended [WozU's Full Stack Web Development Training Program](https://woz-u.com/learn/software-development/full-stack-web-dev/). In it I learned programming fundamentals, how to develop web applications with Node.js and the .Net Framework. As well as how to deploy those applications to Amazon Web Services.`
+const text = `I became certified through [WozU's Full Stack Web Development Training Program](https://woz-u.com/learn/software-development/full-stack-web-dev/) in 2017. I learned programming fundamentals; how to develop web applications with Node.js, Angular and the .NET Framework. In conjunction with deploying those applications to Amazon Web Services.`
 export default text

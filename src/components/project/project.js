@@ -10,11 +10,11 @@ import Carousel from '@brainhubeu/react-carousel'
 
 import './project.css'
 
-export function CarouselItem({src, text}) {
+export function CarouselItem({src, text, alt}) {
     return (
         <div className={`carouselItem${src ? ' hasImg': ''}`}>
             {src ? 
-                <img src={src} alt="logo"></img>: 
+                <img src={src} alt={alt}></img>: 
                 ''
             }
             <ReactMarkdown source={text}/>
@@ -35,7 +35,7 @@ export default function({id, children, title}) {
                     addArrowClickHandler={true}
                     value={state} 
                     onChange={onChange}
-                    autoPlay={4000}
+                    autoPlay={6000}
                     stopAutoPlayOnHover={true}
                     infinite={true}
                     slides={children}

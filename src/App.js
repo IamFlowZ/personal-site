@@ -45,9 +45,9 @@ function App() {
       </ol>
       <Contact/>
       <Carousel id="Skills" title="Certifications & Skills">
-        <CarouselItem src={awsLogo} text={awsText}></CarouselItem>
-        <CarouselItem src={wozULogo} text={schoolText}></CarouselItem>
-        <CarouselItem src={otherSkillsLogo} text={otherText}></CarouselItem>
+        <CarouselItem src={awsLogo} text={awsText} alt="Amazon Web Services Logo"></CarouselItem>
+        <CarouselItem src={wozULogo} text={schoolText} alt="WozU Logo"></CarouselItem>
+        <CarouselItem src={otherSkillsLogo} text={otherText} alt="Assorted Logos"></CarouselItem>
       </Carousel>
       <Carousel id="Projects" title="Projects">
         <CarouselItem text={dicewareText}></CarouselItem>
