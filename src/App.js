@@ -10,6 +10,11 @@ import awsLogo from "./assets/icons/social/aws.svg"
 import wozULogo from "./assets/icons/social/woz-u.jpg"
 import otherSkillsLogo from './assets/icons/personal/otherSkills.svg'
 
+import dicewareCap from './assets/images/diceware.png'
+import dndCap from './assets/images/dnd_graphql.png'
+import shortcutCap from './assets/images/shortcut.png'
+import personalSite from './assets/images/personalSite.png'
+
 import awsText from './assets/markdown/skills/aws'
 import schoolText from './assets/markdown/skills/web-dev'
 import otherText from './assets/markdown/skills/other'
@@ -50,10 +55,10 @@ function App() {
         <CarouselItem src={otherSkillsLogo} text={otherText} alt="Assorted Logos"></CarouselItem>
       </Carousel>
       <Carousel id="Projects" title="Projects">
-        <CarouselItem text={dicewareText}></CarouselItem>
-        <CarouselItem text={dndText}></CarouselItem>
-        <CarouselItem text={shortcutText}></CarouselItem>
-        <CarouselItem text={personalText}></CarouselItem>
+        <CarouselItem src={dicewareCap} text={dicewareText}></CarouselItem>
+        <CarouselItem src={dndCap} text={dndText}></CarouselItem>
+        <CarouselItem src={shortcutCap }text={shortcutText}></CarouselItem>
+        <CarouselItem src={personalSite} text={personalText}></CarouselItem>
       </Carousel>
     </div>
   );
