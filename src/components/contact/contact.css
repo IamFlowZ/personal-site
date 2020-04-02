@@ -1,140 +1,133 @@
 .contactContainer {
-    position: relative;
-    display: flex;
-    flex-flow: wrap;
-    align-items: flex-start;
-    top: 15vh;
-    height: 70%;
-    border-radius: 1rem;
-    margin-bottom: 25rem;
-    background-color: #3a4e7a;
-    border: 1px solid white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  top: 15vh;
+  height: 70%;
+  border-radius: 1rem;
+  margin-bottom: 25rem;
+  background-color: #3a4e7a;
 }
 
 #profile {
-    border: 1px solid white;
-    border-radius: 1rem;
-    margin-right: 1rem;
-    z-index: 99;
-    height: 17rem;
-    width: 17rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background-color: white;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  z-index: 99;
+  height: 17rem;
+  width: 17rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: white;
 }
 
 .bio {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    height: 17rem;
-    max-width: 100%;
-    /* margin-right: 2rem; */
-    max-height: 20rem;
-    overflow: hidden;
-    margin-top: 2rem;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  height: 17rem;
+  max-width: 100%;
+  max-height: 20rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  color: white;
 }
 
 .bio p {
-    margin-right: 2rem;
+  margin-right: 2rem;
 }
 
 .contactSocial {
-    /* align-self: flex-end; */
-    align-content: center;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative; 
-    display: flex;
-    /* margin-top: 5rem; */
-    /* margin-bottom: 0.75rem; */
-    color: white;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  display: flex;
+  color: white;
 }
 
 .contactSocial > p {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .contactSocial > img {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
-@media only screen and (min-width:1525px) {
-    .bio {
-        max-width: 70%;
-    }
+@media only screen and (min-width: 1525px) {
+  .bio {
+    max-width: 70%;
+  }
 }
 
 @media only screen and (max-width: 1524px) {
-    .bio {
-        max-width: 50%;
-    }
+  .bio {
+    max-width: 50%;
+  }
 }
 
 @media only screen and (max-width: 925px) {
-    #profile {
-        margin: 0;
-        margin-top: 1rem;
-        margin-left: 8rem;
-        align-self: center;
-        justify-self: center;
-    }
-    .contactContainer {
-        top: 10vh;
-        margin-bottom: 20rem;
-    }
-    .bio {
-        margin-left: 8rem;
-        margin-bottom: 2rem;
-        max-width: 60%;
-    }
+  #profile {
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 8rem;
+    align-self: center;
+    justify-self: center;
+  }
+  .contactContainer {
+    top: 10vh;
+    margin-bottom: 20rem;
+  }
+  .bio {
+    margin-left: 8rem;
+    margin-bottom: 2rem;
+    max-width: 60%;
+  }
 }
 
 @media only screen and (max-width: 775px) {
-    #profile {
-        margin-left: 6rem;
-    }
-    .bio {
-        margin-left: 6rem;
-        margin-bottom: 2rem;
-        max-width: 80%;
-    }
+  #profile {
+    margin-left: 6rem;
+  }
+  .bio {
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-    .contactContainer {
-        margin-bottom: 12rem;
-    }
-    #profile {
-        margin-left: 4em;
-    }
-    .bio {
-        margin-left: 4em;
-    }
+  .contactContainer {
+    margin-bottom: 12rem;
+  }
+  #profile {
+    margin-left: 4em;
+  }
+  .bio {
+    margin-left: 4em;
+  }
 }
 
 @media only screen and (max-width: 575px) {
-    #profile {
-        margin-left: 2rem;
-    }
-    .bio {
-        margin-left: 2rem;
-        margin-bottom: 2rem;
-        max-width: 80%;
-    }
+  #profile {
+    margin-left: 2rem;
+  }
+  .bio {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+  }
 }
 
-@media only screen and (max-width: 500px)  {
-    #profile {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-    .bio {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
+@media only screen and (max-width: 500px) {
+  #profile {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .bio {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }

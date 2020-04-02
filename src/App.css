@@ -1,6 +1,6 @@
 /* Color Palette 
   Taken from: https://colorpalettes.net/color-palette-2326/
-  Dark: 091d36,
+  Dark: 05101f,
   Medium-Dark: 3a4e7a,
   Medium: 5e83ba,
   Medium-Light: c2d2e9,
@@ -15,7 +15,7 @@
 
 body {
   height: 100%;
-  background: #091d36;
+  background: #05101f;
 }
 
 .App {
