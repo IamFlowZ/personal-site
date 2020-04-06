@@ -47,6 +47,12 @@ const images = [
 
 function App() {
   const [contactHidden, hideContact] = useState(false)
+  const [isOpen, openModal] = useState(false)
+  const [currentIndex, setIndex] = useState(0)
+  const toggleModal = (i) => {
+    setIndex(i)
+    return openModal(!isOpen)
+  }
   useEffect(_ => {
     const target = document.querySelector("#Contact")
     const handleScroll = _ => {
@@ -64,73 +70,20 @@ function App() {
       <Contact/>
       <div className="ReactGridGallery" style={{overflow:"hiden", marginLeft:-gutter, marginRight: -gutter}}>
         {images.map((image, i) => (
-          <div key={i} style={{float: "left", margin: gutter, overflow:"hidden", paddingBottom:"16%", position:"relative", width:`calc(25% - ${gutter * 2}px`}}>
-            <img alt={image.caption} src={image.src} style={{cursor:"pointer", position: "absolute", maxWidth:"100%"}}/>
+          <div key={i} style={{float: "left", margin: gutter, marginBottom:"20rem", overflow:"hidden", paddingBottom:"16%", position:"relative", width:`calc(25% - ${gutter * 2}px`}}>
+            <img onClick={() => toggleModal(i)} alt={image.caption} src={image.src} style={{cursor:"pointer", position: "absolute", maxWidth:"100%"}}/>
           </div>
         ))}
       </div>
-      <Thing/>
+      <ModalGateway>
+        {isOpen ? (
+          <Modal onClose={() => toggleModal(currentIndex)}>
+            <Carousel views={images} currentIndex={currentIndex} />
+          </Modal>
+        ): null}
+      </ModalGateway>
     </div>
   );
 }
-
-function Thing(open = true) {
-  const [isOpen, openModal] = useState(open)
-  const toggleModal = () => openModal(!isOpen)
-  return (
-    <ModalGateway>
-      {isOpen ? (
-        <Modal onClose={toggleModal}>
-          <Carousel views={images}/>
-        </Modal>
-      ): null}
-    </ModalGateway>
-  )
-}
-
-// function Thing() {
-//   const [selectedIndex, setIndex] = useState(0)
-//   const [lightboxIsOpen, openLightBox] = useState(false)
-//   return (
-//     <>
-//       <Gallery>
-//         {images.map(image => (
-//           <Image onClick={() => openLightBox(!lightboxIsOpen)} key={}></Image>
-//         ))}
-//       </Gallery>
-//     </>
-//   )
-// }
-
-// const Gallery = (props) => {
-//   <div
-//     css={{
-//       overflow: 'hidden',
-//       marginLeft: -gutter,
-//       marginRight: -gutter,
-//     }}
-//     {...props}
-//   />
-// }
-
-// const Image = (props) => (
-//   <div
-//     css={{
-//       backgroundColor: '#eee',
-//       boxSizing: 'border-box',
-//       float: 'left',
-//       margin: gutter,
-//       overflow: 'hidden',
-//       paddingBottom: '16%',
-//       position: 'relative',
-//       width: `calc(25% - ${gutter * 2}px)`,
-
-//       ':hover': {
-//         opacity: 0.9,
-//       },
-//     }}
-//     {...props}
-//   />
-// );
 
 export default App;
