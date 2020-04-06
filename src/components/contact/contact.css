@@ -1,13 +1,16 @@
 .contactContainer {
-  position: relative;
+  /* position: -webkit-sticky; Safari */
+  position: sticky;
+  /* position: relative; */
+  top: 0vh;
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
-  top: 15vh;
   height: 70%;
   border-radius: 1rem;
   margin-bottom: 25rem;
   background-color: #3a4e7a;
+  
 }
 
 #profile {

@@ -6,6 +6,9 @@ import NavDot from './components/navDot/navDot'
 import Contact from './components/contact/contact'
 import Carousel, {CarouselItem} from './components/project/project'
 
+import ReactMarkdown from 'react-markdown'
+import Gallery from 'react-grid-gallery'
+
 import awsLogo from "./assets/icons/social/aws.svg"
 import wozULogo from "./assets/icons/social/woz-u.jpg"
 import otherSkillsLogo from './assets/icons/personal/otherSkills.svg'
@@ -24,42 +27,55 @@ import dndText from './assets/markdown/projects/dnd-graphql'
 import shortcutText from './assets/markdown/projects/shortcut'
 import personalText from './assets/markdown/projects/personal-site'
 
+const images = [
+  {
+    src: dicewareCap,
+    thumbnail: dicewareCap,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    caption:<ReactMarkdown source={dicewareText} />
+  },
+  {
+    src: dndCap,
+    thumbnail: dndCap,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    caption:"TEST"
+  },
+  {
+    src: shortcutCap,
+    thumbnail: shortcutCap,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    caption:"TEST"
+  },
+  {
+    src: personalSite,
+    thumbnail: personalSite,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    caption:"TEST"
+  }
+]
+
 function App() {
-  const [firstDot, setFirstDot] = useState(true)
-  const [secondDot, setSecondDot] = useState(false)
-  const [thirdDot, setThirdDot] = useState(false)
+  const [contactHidden, hideContact] = useState(false)
   useEffect(_ => {
+    const target = document.querySelector("#Contact")
     const handleScroll = _ => {
-      const position = window.pageYOffset / document.body.scrollHeight
-      setFirstDot(position < 0.2)
-      setSecondDot(position >= 0.2 && position < 0.5)
-      setThirdDot(position >= 0.5)
+      target.getBoundingClientRect().y === 0 ? console.log("yes") : console.log("no")
     }
     window.addEventListener('scroll', handleScroll)
     return _ => {
-        window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll)
     }
   })
 
   return (
     <div className="App" >
-      <ol style={{listStyleType:"none", visibility: window.innerWidth < 500 ? "hidden": "visible"}}>
-        <li><NavDot state={firstDot} title="Contact" top="45%"/></li>
-        <li><NavDot state={secondDot} title="Skills" top="50%"/></li>
-        <li><NavDot state={thirdDot} title="Projects" top="55%"/></li>
-      </ol>
+      <div style={{height:"15vh", width: "100%"}} className="sticky_sentinel--top"></div>
       <Contact/>
-      <Carousel id="Skills" title="Certifications & Skills">
-        <CarouselItem src={awsLogo} text={awsText} alt="Amazon Web Services Logo"></CarouselItem>
-        <CarouselItem src={wozULogo} text={schoolText} alt="WozU Logo"></CarouselItem>
-        <CarouselItem src={otherSkillsLogo} text={otherText} alt="Assorted Logos"></CarouselItem>
-      </Carousel>
-      <Carousel id="Projects" title="Projects">
-        <CarouselItem src={dicewareCap} text={dicewareText}></CarouselItem>
-        <CarouselItem src={dndCap} text={dndText}></CarouselItem>
-        <CarouselItem src={shortcutCap }text={shortcutText}></CarouselItem>
-        <CarouselItem src={personalSite} text={personalText}></CarouselItem>
-      </Carousel>
+      <Gallery images={images} enableImageSelection={false}></Gallery>
     </div>
   );
 }
