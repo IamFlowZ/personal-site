@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './contact.css'
 import profile from '../../assets/icons/personal/me.jpg'
@@ -8,6 +8,17 @@ import github from '../../assets/icons/social/github.svg'
 
 
 export default function() {
+    const [contactHidden, hideContact] = useState(false)
+    useEffect(_ => {
+      const target = document.querySelector("#Contact")
+      const handleScroll = _ => {
+        target.getBoundingClientRect().y === 0 ? console.log("yes") : console.log("no")
+      }
+      window.addEventListener('scroll', handleScroll)
+      return _ => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    })
     return (
         <div className="contactContainer" id="Contact" >
             <img src={profile} alt="my likeness" id="profile"></img>
