@@ -69,9 +69,10 @@ function App() {
       <div style={{height:"15vh", width: "100%"}} className="sticky_sentinel--top"></div>
       <Contact/>
       <div className="ReactGridGallery" style={{overflow:"hiden", marginLeft:-gutter, marginRight: -gutter}}>
+        <h1 style={{width:"100%", textAlign:"center", marginBottom:"0.5rem"}}>Projects</h1>
         {images.map((image, i) => (
-          <div key={i} style={{float: "left", margin: gutter, marginBottom:"20rem", overflow:"hidden", paddingBottom:"16%", position:"relative", width:`calc(25% - ${gutter * 2}px`}}>
-            <img onClick={() => toggleModal(i)} alt={image.caption} src={image.src} style={{cursor:"pointer", position: "absolute", maxWidth:"100%"}}/>
+          <div key={i} style={{float: "left", margin: gutter, marginBottom:"15rem", overflow:"hidden", paddingBottom:"16%", position:"relative", width:`calc(25% - ${gutter * 2}px`}}>
+            <img onClick={() => toggleModal(i)} alt={image.caption} src={image.src} style={{cursor:"pointer", position: "absolute", maxWidth:"100%", height:"10rem"}}/>
           </div>
         ))}
       </div>
