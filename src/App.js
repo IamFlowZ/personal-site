@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
+import Carousel, { Modal, ModalGateway } from 'react-images';
+
 import Contact from './components/contact/contact'
 // import Carousel, {CarouselItem} from './components/project/project'
 
-// import ReactMarkdown from 'react-markdown'
-import Gallery from 'react-grid-gallery'
+import ReactMarkdown from 'react-markdown'
 
 // import awsLogo from "./assets/icons/social/aws.svg"
 // import wozULogo from "./assets/icons/social/woz-u.jpg"
@@ -20,39 +21,27 @@ import personalSite from './assets/images/personalSite.png'
 // import schoolText from './assets/markdown/skills/web-dev'
 // import otherText from './assets/markdown/skills/other'
 
-// import dicewareText from './assets/markdown/projects/diceware'
-// import dndText from './assets/markdown/projects/dnd-graphql'
-// import shortcutText from './assets/markdown/projects/shortcut'
-// import personalText from './assets/markdown/projects/personal-site'
+import dicewareText from './assets/markdown/projects/diceware'
+import dndText from './assets/markdown/projects/dnd-graphql'
+import shortcutText from './assets/markdown/projects/shortcut'
+import personalText from './assets/markdown/projects/personal-site'
 
 const images = [
   {
     src: dicewareCap,
-    thumbnail: dicewareCap,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    // caption: <ReactMarkdown source={dicewareText} />
+    caption: <ReactMarkdown source={dicewareText} />
   },
   {
     src: dndCap,
-    thumbnail: dndCap,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    // caption: <ReactMarkdown source={dndText} />
+    caption: <ReactMarkdown source={dndText} />
   },
   {
     src: shortcutCap,
-    thumbnail: shortcutCap,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    // caption: <ReactMarkdown source={shortcutText} />
+    caption: <ReactMarkdown source={shortcutText} />
   },
   {
     src: personalSite,
-    thumbnail: personalSite,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    // caption: <ReactMarkdown source={personalText} />
+    caption: <ReactMarkdown source={personalText} />
   }
 ]
 
@@ -68,15 +57,80 @@ function App() {
       window.removeEventListener('scroll', handleScroll)
     }
   })
-
+  const gutter = 2
   return (
     <div className="App" >
       <div style={{height:"15vh", width: "100%"}} className="sticky_sentinel--top"></div>
       <Contact/>
-      {/* <h2 style={{position: "relative", alignSelf: "center"}}>Projects</h2> */}
-      <Gallery images={images} enableImageSelection={false}></Gallery>
+      <div className="ReactGridGallery" style={{overflow:"hiden", marginLeft:-gutter, marginRight: -gutter}}>
+        {images.map((image, i) => (
+          <div key={i} style={{float: "left", margin: gutter, overflow:"hidden", paddingBottom:"16%", position:"relative", width:`calc(25% - ${gutter * 2}px`}}>
+            <img alt={image.caption} src={image.src} style={{cursor:"pointer", position: "absolute", maxWidth:"100%"}}/>
+          </div>
+        ))}
+      </div>
+      <Thing/>
     </div>
   );
 }
+
+function Thing(open = true) {
+  const [isOpen, openModal] = useState(open)
+  const toggleModal = () => openModal(!isOpen)
+  return (
+    <ModalGateway>
+      {isOpen ? (
+        <Modal onClose={toggleModal}>
+          <Carousel views={images}/>
+        </Modal>
+      ): null}
+    </ModalGateway>
+  )
+}
+
+// function Thing() {
+//   const [selectedIndex, setIndex] = useState(0)
+//   const [lightboxIsOpen, openLightBox] = useState(false)
+//   return (
+//     <>
+//       <Gallery>
+//         {images.map(image => (
+//           <Image onClick={() => openLightBox(!lightboxIsOpen)} key={}></Image>
+//         ))}
+//       </Gallery>
+//     </>
+//   )
+// }
+
+// const Gallery = (props) => {
+//   <div
+//     css={{
+//       overflow: 'hidden',
+//       marginLeft: -gutter,
+//       marginRight: -gutter,
+//     }}
+//     {...props}
+//   />
+// }
+
+// const Image = (props) => (
+//   <div
+//     css={{
+//       backgroundColor: '#eee',
+//       boxSizing: 'border-box',
+//       float: 'left',
+//       margin: gutter,
+//       overflow: 'hidden',
+//       paddingBottom: '16%',
+//       position: 'relative',
+//       width: `calc(25% - ${gutter * 2}px)`,
+
+//       ':hover': {
+//         opacity: 0.9,
+//       },
+//     }}
+//     {...props}
+//   />
+// );
 
 export default App;

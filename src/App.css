@@ -39,8 +39,8 @@ body {
 }
 
 .ReactGridGallery {
-  height: 29rem;
-  width: 45rem;
+  height: 20rem;
+  width: 100%;
   padding: 2rem;
   background-color: #3a4e7a;
   border-radius: 1rem;
