@@ -43,20 +43,5 @@ body {
   width: 45rem;
   padding: 2rem;
   background-color: #3a4e7a;
-}
-
-.sticky_sentinel {
-  position: absolute;
-  left: 0;
-  right: 0; /* needs dimensions */
-  visibility: hidden;
-}
-
-.sticky_sentinel--top {
-  /* Adjust the height and top values based on your on your sticky top position.
-  e.g. make the height bigger and adjust the top so observeHeaders()'s
-  IntersectionObserver fires as soon as the bottom of the sentinel crosses the
-  top of the intersection container. */
-  height: 40px;
-  top: -24px;
+  border-radius: 1rem;
 }

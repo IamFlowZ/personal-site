@@ -8,7 +8,7 @@ import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import '@brainhubeu/react-carousel/lib/style.css';
 import Carousel from '@brainhubeu/react-carousel'
 
-import './project.css'
+// import './project.css'
 
 export function CarouselItem({src, text, alt}) {
     return (
