@@ -7,7 +7,7 @@ import Gallery from './components/gallery/gallery'
 function App() {
   return (
     <div className="App" >
-      <div style={{height:"15vh", width: "100%", backgroundColor:"white"}} className="sticky_sentinel--top"></div>
+      <div style={{height:"15vh", width: "100%"}} ></div>
       <Contact/>
       <Gallery/>
     </div>
