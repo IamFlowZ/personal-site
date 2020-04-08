@@ -1,0 +1,33 @@
+.ReactGridGallery {
+	display: flex;
+	flex-wrap: wrap;
+	height: 20rem;
+	width: 70%;
+	padding: 1rem;
+	background-color: #3a4e7a;
+	border-radius: 1rem;
+	overflow: hidden;
+	align-items: center;
+	margin-bottom: 5rem;
+}
+
+.ReactGridGallery > div {
+	margin-right: 0.25rem;
+	width: calc(50% - 4px);
+	position: relative;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+	.ReactGridGallery {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		height: 40rem;
+		width: 100%;
+	}
+	.ReactGridGallery > div {
+		margin-right: 0;
+		margin-bottom: 0.25rem;
+		width: 100%;
+	}
+}

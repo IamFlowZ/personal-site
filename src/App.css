@@ -27,11 +27,3 @@ body {
   align-content: center;
   align-items: center;
 }
-
-.ReactGridGallery {
-  height: 20rem;
-  width: 100%;
-  padding: 2rem;
-  background-color: #3a4e7a;
-  border-radius: 1rem;
-}
