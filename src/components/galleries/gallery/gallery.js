@@ -3,8 +3,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 
 import "./gallery.css";
 
-
-export default function ({images}) {
+export default function ({ images }) {
   const [isOpen, openModal] = useState(false);
   const [currentIndex, setIndex] = useState(0);
   const toggleModal = (i) => {

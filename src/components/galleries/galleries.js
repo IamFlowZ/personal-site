@@ -5,9 +5,11 @@ import Gallery from "./gallery/gallery";
 
 import awsLogo from "../../assets/icons/social/aws.svg";
 import wozULogo from "../../assets/icons/social/woz-u.jpg";
+import neo4jLogo from "../../assets/icons/social/neo4j.svg";
 import otherSkillsLogo from "../../assets/icons/personal/otherSkills.svg";
 
 import awsText from "../../assets/markdown/skills/aws";
+import neo4jText from "../../assets/markdown/skills/neo4j";
 import schoolText from "../../assets/markdown/skills/web-dev";
 import otherText from "../../assets/markdown/skills/other";
 
@@ -26,25 +28,25 @@ const projects = [
     src: dicewareCap,
     caption: <ReactMarkdown source={dicewareText} />,
     alt: "Screenshot of the Diceware CLI in use.",
-    title:"Diceware"
+    title: "Diceware",
   },
   {
     src: dndCap,
     caption: <ReactMarkdown source={dndText} />,
     alt: "Screenshot of the schema for the DND API",
-    title: "Dungeons & Dragons API"
+    title: "Dungeons & Dragons API",
   },
   {
     src: shortcutCap,
     caption: <ReactMarkdown source={shortcutText} />,
     alt: "Screenshot of the Shortcut CLI in use.",
-    title: "Shortcut"
+    title: "Shortcut",
   },
   {
     src: personalSite,
     caption: <ReactMarkdown source={personalText} />,
     alt: "Screenshot of a code snippet from this website.",
-    title: "Personal Site"
+    title: "Personal Site",
   },
 ];
 
@@ -53,19 +55,25 @@ const other = [
     src: awsLogo,
     caption: <ReactMarkdown source={awsText} />,
     alt: "Amazon Web Services logo.",
-    title: "AWS Certification"
+    title: "AWS Certification",
   },
   {
     src: wozULogo,
     caption: <ReactMarkdown source={schoolText} />,
     alt: "Woz U Logo",
-    title: "Woz U Certification"
+    title: "Woz U Certification",
+  },
+  {
+    src: neo4jLogo,
+    caption: <ReactMarkdown source={neo4jText} />,
+    alt: "Neo4j Logo",
+    title: "Neo4j Certification",
   },
   {
     src: otherSkillsLogo,
     caption: <ReactMarkdown source={otherText} />,
     alt: "Collage of other technologies I've used.",
-    title: "Other Skills"
+    title: "Other Skills",
   },
 ];
 
