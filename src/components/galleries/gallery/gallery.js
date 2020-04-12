@@ -11,7 +11,7 @@ export default function ({images}) {
     setIndex(i);
     return openModal(!isOpen);
   };
-  const gutter = 2;
+
   return (
     <>
       <div className="ReactGridGallery">
@@ -22,6 +22,7 @@ export default function ({images}) {
               alt={image.alt}
               src={image.src}
             />
+            <p>{image.title}</p>
           </div>
         ))}
       </div>

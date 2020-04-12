@@ -24,41 +24,48 @@ import personalText from "../../assets/markdown/projects/personal-site";
 const projects = [
   {
     src: dicewareCap,
-	caption: <ReactMarkdown source={dicewareText} />,
-	alt: "Screenshot of the Diceware CLI in use."
+    caption: <ReactMarkdown source={dicewareText} />,
+    alt: "Screenshot of the Diceware CLI in use.",
+    title:"Diceware"
   },
   {
     src: dndCap,
-	caption: <ReactMarkdown source={dndText} />,
-	alt: "Screenshot of the schema for the DND API"
+    caption: <ReactMarkdown source={dndText} />,
+    alt: "Screenshot of the schema for the DND API",
+    title: "Dungeons & Dragons API"
   },
   {
     src: shortcutCap,
-	caption: <ReactMarkdown source={shortcutText} />,
-	alt: "Screenshot of the Shortcut CLI in use."
+    caption: <ReactMarkdown source={shortcutText} />,
+    alt: "Screenshot of the Shortcut CLI in use.",
+    title: "Shortcut"
   },
   {
     src: personalSite,
-	caption: <ReactMarkdown source={personalText} />,
-	alt: "Screenshot of a code snippet from this website."
+    caption: <ReactMarkdown source={personalText} />,
+    alt: "Screenshot of a code snippet from this website.",
+    title: "Personal Site"
   },
 ];
 
 const other = [
   {
     src: awsLogo,
-	caption: <ReactMarkdown source={awsText} />,
-	alt: "Amazon Web Services logo."
+    caption: <ReactMarkdown source={awsText} />,
+    alt: "Amazon Web Services logo.",
+    title: "AWS Certification"
   },
   {
     src: wozULogo,
-	caption: <ReactMarkdown source={schoolText} />,
-	alt: "Woz U Logo"
+    caption: <ReactMarkdown source={schoolText} />,
+    alt: "Woz U Logo",
+    title: "Woz U Certification"
   },
   {
     src: otherSkillsLogo,
-	caption: <ReactMarkdown source={otherText} />,
-	alt: "Collage of other technologies I've used."
+    caption: <ReactMarkdown source={otherText} />,
+    alt: "Collage of other technologies I've used.",
+    title: "Other Skills"
   },
 ];
 
