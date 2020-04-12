@@ -24,34 +24,41 @@ import personalText from "../../assets/markdown/projects/personal-site";
 const projects = [
   {
     src: dicewareCap,
-    caption: <ReactMarkdown source={dicewareText} />,
+	caption: <ReactMarkdown source={dicewareText} />,
+	alt: "Screenshot of the Diceware CLI in use."
   },
   {
     src: dndCap,
-    caption: <ReactMarkdown source={dndText} />,
+	caption: <ReactMarkdown source={dndText} />,
+	alt: "Screenshot of the schema for the DND API"
   },
   {
     src: shortcutCap,
-    caption: <ReactMarkdown source={shortcutText} />,
+	caption: <ReactMarkdown source={shortcutText} />,
+	alt: "Screenshot of the Shortcut CLI in use."
   },
   {
     src: personalSite,
-    caption: <ReactMarkdown source={personalText} />,
+	caption: <ReactMarkdown source={personalText} />,
+	alt: "Screenshot of a code snippet from this website."
   },
 ];
 
 const other = [
   {
     src: awsLogo,
-    caption: <ReactMarkdown source={awsText} />,
+	caption: <ReactMarkdown source={awsText} />,
+	alt: "Amazon Web Services logo."
   },
   {
     src: wozULogo,
-    caption: <ReactMarkdown source={schoolText} />,
+	caption: <ReactMarkdown source={schoolText} />,
+	alt: "Woz U Logo"
   },
   {
     src: otherSkillsLogo,
-    caption: <ReactMarkdown source={otherText} />,
+	caption: <ReactMarkdown source={otherText} />,
+	alt: "Collage of other technologies I've used."
   },
 ];
 

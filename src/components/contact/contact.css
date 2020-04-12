@@ -93,6 +93,12 @@
 }
 
 @media only screen and (max-width: 750px) {
+  #profile {
+    margin-bottom: 0;
+  }
+  .bio {
+    margin: 0;
+  }
   .contactContainer {
     align-items: center;
     justify-content: center;

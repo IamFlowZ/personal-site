@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
 import "./gallery.css";
 
 
-export default function ({title, images}) {
+export default function ({images}) {
   const [isOpen, openModal] = useState(false);
   const [currentIndex, setIndex] = useState(0);
   const toggleModal = (i) => {
@@ -19,7 +19,7 @@ export default function ({title, images}) {
           <div key={i}>
             <img
               onClick={() => toggleModal(i)}
-              alt={image.caption}
+              alt={image.alt}
               src={image.src}
             />
           </div>
