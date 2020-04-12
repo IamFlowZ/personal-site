@@ -2,12 +2,13 @@
   /* position: -webkit-sticky; Safari */
   /* position: sticky; */
   position: relative;
-  top: 0vh;
+  top: 5vh;
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
   height: 70%;
   border-radius: 1rem;
+  
   margin-bottom: 15rem;
   background-color: #3a4e7a;
   
