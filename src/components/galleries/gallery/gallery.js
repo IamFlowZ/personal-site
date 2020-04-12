@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
 import github from "../../../assets/icons/social/github.svg";
