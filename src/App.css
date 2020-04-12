@@ -41,21 +41,3 @@ body {
     margin: 2.5%;
   }
 }
-
-.galleryTabs {
-  width: 100%; 
-  list-style: none;
-}
-
-.galleryTabs li {
-  width: 50%;
-  float: left;
-}
-
-.galleryTabs h2 {
-  align-self: flex-start;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 1rem 1rem 0 0;
-  background-color: #2b3a5c;
-}

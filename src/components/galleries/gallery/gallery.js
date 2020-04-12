@@ -21,13 +21,6 @@ export default function ({title, images}) {
               onClick={() => toggleModal(i)}
               alt={image.caption}
               src={image.src}
-              style={{
-                width: "100%",
-                cursor: "pointer",
-                maxWidth: "100%",
-                height: "10rem",
-                marginBottom: "0",
-              }}
             />
           </div>
         ))}
