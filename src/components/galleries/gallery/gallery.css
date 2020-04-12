@@ -1,0 +1,113 @@
+.ReactGridGallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  background-color: #3a4e7a;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.ReactGridGallery > li {
+  margin-right: 0.25rem;
+  width: calc(50% - 4px);
+  position: relative;
+  overflow: hidden;
+}
+
+.ReactGridGallery img {
+  background-color: white;
+  width: 100%;
+  cursor: pointer;
+  max-width: 100%;
+  height: 15rem;
+  margin-bottom: 0;
+  z-index: 98;
+}
+
+.ReactGridGallery img + p + a > img {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.fullscreen img {
+  background-color: white;
+}
+
+.galleryTabs {
+  width: 100%;
+  list-style: none;
+}
+
+.galleryTabs li {
+  width: 50%;
+  float: left;
+}
+
+.galleryTabs h2 {
+  align-self: flex-start;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #2b3a5c;
+}
+
+.ReactGridGallery p {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ReactGridGallery a {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.ReactGridGallery > li > img:hover {
+  opacity: 0.25;
+}
+
+.ReactGridGallery > :hover a {
+  visibility: visible;
+}
+
+.ReactGridGallery > :hover p {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1000px) {
+  .ReactGridGallery {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .ReactGridGallery > li {
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+    width: 100%;
+    height: 20rem;
+  }
+  .ReactGridGallery img {
+    height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .ReactGridGallery > li {
+    height: 15rem;
+  }
+  .ReactGridGallery img {
+    height: 15rem;
+  }
+}

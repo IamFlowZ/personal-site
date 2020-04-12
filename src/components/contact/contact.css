@@ -1,41 +1,40 @@
 .contactContainer {
+  /* position: -webkit-sticky; Safari */
+  /* position: sticky; */
   position: relative;
+  top: 5vh;
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
-  top: 15vh;
   height: 70%;
   border-radius: 1rem;
-  margin-bottom: 25rem;
+  margin-bottom: 15rem;
   background-color: #3a4e7a;
 }
 
 #profile {
   border-radius: 1rem;
-  margin-right: 1rem;
   z-index: 99;
   height: 17rem;
   width: 17rem;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   background-color: white;
 }
 
 .bio {
   display: flex;
+  margin-top: 2rem;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-evenly;
   position: relative;
   height: 17rem;
   max-width: 100%;
-  max-height: 20rem;
   overflow: hidden;
-  margin-top: 2rem;
   color: white;
 }
 
-.bio p {
+.bio > p {
   margin-right: 2rem;
 }
 
@@ -56,78 +55,51 @@
   margin-right: 1rem;
 }
 
-@media only screen and (min-width: 1525px) {
-  .bio {
-    max-width: 70%;
+@media only screen and (max-width: 1650px) {
+  .bio > p {
+    width: 30rem;
   }
 }
 
-@media only screen and (max-width: 1524px) {
-  .bio {
-    max-width: 50%;
+@media only screen and (max-width: 1250px) {
+  .bio > p {
+    width: 20rem;
   }
 }
 
-@media only screen and (max-width: 925px) {
+@media only screen and (max-width: 1000px) {
   #profile {
+    /* margin: 0; */
+    margin-top: 2rem;
+  }
+  .bio > p {
     margin: 0;
+    width: 17rem;
+  }
+  .bio {
+    margin: 0;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactContainer {
+    margin-bottom: 7rem;
+  }
+  .contactSocial {
     margin-top: 1rem;
-    margin-left: 8rem;
-    align-self: center;
-    justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #profile {
+    margin-bottom: 0;
+  }
+  .bio {
+    margin: 0;
   }
   .contactContainer {
-    top: 10vh;
-    margin-bottom: 20rem;
-  }
-  .bio {
-    margin-left: 8rem;
-    margin-bottom: 2rem;
-    max-width: 60%;
-  }
-}
-
-@media only screen and (max-width: 775px) {
-  #profile {
-    margin-left: 6rem;
-  }
-  .bio {
-    margin-left: 6rem;
-    margin-bottom: 2rem;
-    max-width: 80%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .contactContainer {
-    margin-bottom: 12rem;
-  }
-  #profile {
-    margin-left: 4em;
-  }
-  .bio {
-    margin-left: 4em;
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  #profile {
-    margin-left: 2rem;
-  }
-  .bio {
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    max-width: 80%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #profile {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-  .bio {
-    margin-left: 1em;
-    margin-right: 1em;
+    align-items: center;
+    justify-content: center;
   }
 }

@@ -28,12 +28,16 @@ body {
   align-items: center;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (max-width: 1000px) {
+  .App {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    width: 95%;
+    margin: 2.5%;
+  }
 }
