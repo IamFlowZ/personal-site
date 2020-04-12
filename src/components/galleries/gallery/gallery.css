@@ -1,7 +1,6 @@
 .ReactGridGallery {
 	display: flex;
 	flex-wrap: wrap;
-	/* height: 20rem; */
 	width: 100%;
 	padding: 1rem;
 	background-color: #3a4e7a;
