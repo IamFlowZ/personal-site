@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
+
+import github from "../../../assets/icons/social/github.svg";
 
 import "./gallery.css";
 
@@ -13,18 +15,34 @@ export default function ({ images }) {
 
   return (
     <>
-      <div className="ReactGridGallery">
+      <ul className="ReactGridGallery">
         {images.map((image, i) => (
-          <div key={i}>
+          <li key={i}>
             <img
               onClick={() => toggleModal(i)}
               alt={image.alt}
               src={image.src}
             />
             <p>{image.title}</p>
-          </div>
+            {image.link ? (
+              <a href={image.link}>
+                <img
+                  src={github}
+                  alt="github logo"
+                  style={{
+                    margin: 0,
+                    height: "2em",
+                    width: "2em",
+                    marginTop: "5rem",
+                    backgroundColor: "none",
+                  }}
+                  className="linkLogo"
+                ></img>
+              </a>
+            ) : null}
+          </li>
         ))}
-      </div>
+      </ul>
       <ModalGateway>
         {isOpen ? (
           <Modal onClose={() => toggleModal(currentIndex)}>

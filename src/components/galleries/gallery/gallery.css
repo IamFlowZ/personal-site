@@ -10,7 +10,7 @@
   margin-bottom: 5rem;
 }
 
-.ReactGridGallery > div {
+.ReactGridGallery > li {
   margin-right: 0.25rem;
   width: calc(50% - 4px);
   position: relative;
@@ -25,6 +25,10 @@
   height: 15rem;
   margin-bottom: 0;
   z-index: 98;
+}
+
+.ReactGridGallery img + p + a > img {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .fullscreen img {
@@ -60,11 +64,25 @@
   pointer-events: none;
 }
 
-.ReactGridGallery img:hover {
+.ReactGridGallery a {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.ReactGridGallery > li > img:hover {
   opacity: 0.25;
 }
 
-.ReactGridGallery img:hover + p {
+.ReactGridGallery > :hover a {
+  visibility: visible;
+}
+
+.ReactGridGallery > :hover p {
   visibility: visible;
 }
 
@@ -74,7 +92,7 @@
     flex-wrap: nowrap;
     width: 100%;
   }
-  .ReactGridGallery > div {
+  .ReactGridGallery > li {
     margin-right: 0;
     margin-bottom: 0.25rem;
     width: 100%;
@@ -86,7 +104,7 @@
 }
 
 @media only screen and (max-width: 550px) {
-  .ReactGridGallery > div {
+  .ReactGridGallery > li {
     height: 15rem;
   }
   .ReactGridGallery img {

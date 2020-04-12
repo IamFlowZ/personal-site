@@ -29,6 +29,7 @@ const projects = [
     caption: <ReactMarkdown source={dicewareText} />,
     alt: "Screenshot of the Diceware CLI in use.",
     title: "Diceware",
+    // link: "https://github.com/iamflowz/diceware",
   },
   {
     src: dndCap,
