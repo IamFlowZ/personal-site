@@ -38,23 +38,35 @@ function Player({ ctx, playerState, lastKey, intersected }) {
   }
 
   if (intersected) playerState.tail++;
+
   ctx.fillStyle = "lime";
-  playerState.trail.map((trailItem) => {
+  const collisions = playerState.trail.map((trailItem) => {
+    if (
+      trailItem.x === playerState.xPosition &&
+      trailItem.y === playerState.yPosition
+    ) {
+      return false;
+    }
     ctx.fillRect(
       trailItem.x * gridSize,
       trailItem.y * gridSize,
       gridSize - 2,
       gridSize - 2
     );
+    return true;
   });
-  playerState.trail.push({
-    x: playerState.xPosition,
-    y: playerState.yPosition,
-  });
-  while (playerState.trail.length > playerState.tail) {
-    playerState.trail.shift();
+  if (collisions.includes(false)) {
+    return null;
+  } else {
+    playerState.trail.push({
+      x: playerState.xPosition,
+      y: playerState.yPosition,
+    });
+    while (playerState.trail.length > playerState.tail) {
+      playerState.trail.shift();
+    }
+    return playerState;
   }
-  return playerState;
 }
 
 function Apple({ ctx, x, y }) {
@@ -63,10 +75,10 @@ function Apple({ ctx, x, y }) {
 }
 
 export default function Snake() {
-  const [playing, setPlaying] = useState(true);
+  let playing = true;
   let lastKey = 0;
-  const [hasStarted, setHasStarted] = useState(false);
-  const [paused, setPaused] = useState(false);
+  let hasStarted = false;
+  let paused = false;
   let [score, setScore] = useState(0);
   const [statusText, setStatusText] = useState("Paused!!");
   const [playerState, setPlayerState] = useState({
@@ -89,12 +101,12 @@ export default function Snake() {
         evt.preventDefault();
         lastKey = evt.keyCode;
       } else if (evt.keyCode === 27) {
-        setPlaying(!playing);
-        // setPlayerState({
-        //   ...playerState,
-        //   xVelocity: 0,
-        //   yVelocity: 0,
-        // });
+        playing = !playing;
+        setPlayerState({
+          ...playerState,
+          xVelocity: 0,
+          yVelocity: 0,
+        });
       }
     }
   });
