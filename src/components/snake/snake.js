@@ -6,9 +6,10 @@ function getRandomPosition() {
   return Math.floor(Math.random() * gridSize);
 }
 
-function Player({ ctx, playerState, lastKey }) {
+function Player({ ctx, playerState, lastKey, intersected }) {
   playerState.xPosition += playerState.xVelocity;
   playerState.yPosition += playerState.yVelocity;
+
   if (playerState.xPosition < 0) {
     playerState.xPosition = gridSize - 1;
   }
@@ -21,7 +22,7 @@ function Player({ ctx, playerState, lastKey }) {
   if (playerState.yPosition > gridSize - 1) {
     playerState.yPosition = 0;
   }
-  console.log(lastKey);
+
   if (lastKey === 37) {
     playerState.xVelocity = -1;
     playerState.yVelocity = 0;
@@ -35,27 +36,8 @@ function Player({ ctx, playerState, lastKey }) {
     playerState.xVelocity = 0;
     playerState.yVelocity = 1;
   }
-  // switch (lastKey) {
-  //   case 37: // left
-  //     playerState.xVelocity = -1;
-  //     playerState.yVelocity = 0;
-  //     break;
-  //   case 38: // down
-  //     playerState.xVelocity = 0;
-  //     playerState.yVelocity = -1;
-  //     break;
-  //   case 39: // right
-  //     playerState.xVelocity = 1;
-  //     playerState.yVelocity = 0;
-  //     break;
-  //   case 40: // up
-  //     playerState.xVelocity = 0;
-  //     playerState.yVelocity = 1;
-  //     break;
-  //   default:
-  //     break;
-  // }
-  console.log(playerState);
+
+  if (intersected) playerState.tail++;
   ctx.fillStyle = "lime";
   playerState.trail.map((trailItem) => {
     ctx.fillRect(
@@ -75,17 +57,14 @@ function Player({ ctx, playerState, lastKey }) {
   return playerState;
 }
 
-function Apple({ ctx, appleState }) {
+function Apple({ ctx, x, y }) {
   ctx.fillStyle = "red";
-  ctx.fillRect(
-    appleState.xPosition * gridSize,
-    appleState.yPosition * gridSize,
-    gridSize - 2,
-    gridSize - 2
-  );
+  ctx.fillRect(x * gridSize, y * gridSize, gridSize - 2, gridSize - 2);
 }
 
-export default function Snake({ lastKey, playing }) {
+export default function Snake() {
+  const [playing, setPlaying] = useState(true);
+  let lastKey = 0;
   const [hasStarted, setHasStarted] = useState(false);
   const [paused, setPaused] = useState(false);
   let [score, setScore] = useState(0);
@@ -94,41 +73,57 @@ export default function Snake({ lastKey, playing }) {
     xVelocity: 0,
     xPosition: 10,
     yPosition: 10,
-    yVelocity: 1,
+    yVelocity: 0,
     trail: [],
     tail: 5,
   });
-  const [appleState, setAppleState] = useState({
-    xPosition: 10,
-    yPosition: 10,
-  });
+  let appleX = getRandomPosition();
+  let appleY = getRandomPosition();
 
+  useEffect(() => {
+    const gameContainer = document.getElementById("gameContainer");
+    gameContainer.addEventListener("keydown", keyPush);
+    function keyPush(evt) {
+      const keyCodes = [37, 38, 39, 40];
+      if (keyCodes.includes(evt.keyCode)) {
+        evt.preventDefault();
+        lastKey = evt.keyCode;
+      } else if (evt.keyCode === 27) {
+        setPlaying(!playing);
+        // setPlayerState({
+        //   ...playerState,
+        //   xVelocity: 0,
+        //   yVelocity: 0,
+        // });
+      }
+    }
+  });
   useEffect(() => {
     const gameCanvas = document.getElementById("gameCanvas");
     const ctx = gameCanvas.getContext("2d");
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
-    function doStuff() {
+    const doStuff = () => {
       ctx.fillStyle = "black";
       ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+      let intersected = false;
       if (
-        playerState.xPosition === appleState.xPosition &&
-        playerState.yPosition === appleState.yPosition
+        playerState.xPosition === appleX &&
+        playerState.yPosition === appleY
       ) {
-        // setScore(score++);
-        setAppleState({
-          xPosition: getRandomPosition(),
-          yPosition: getRandomPosition(),
-        });
+        intersected = true;
+        setScore(score++);
+        appleX = getRandomPosition();
+        appleY = getRandomPosition();
       }
-      Apple({ ctx, appleState });
-      setPlayerState(Player({ ctx, playerState, lastKey }));
-    }
+      Apple({ ctx, x: appleX, y: appleY });
+      setPlayerState(Player({ ctx, playerState, lastKey, intersected }));
+    };
     const interval = setInterval(doStuff, 1000 / 15);
     if (!playing) {
       clearInterval(interval);
     }
-  }, []);
+  }, [true]);
 
   return (
     <div
