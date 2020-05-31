@@ -19,10 +19,10 @@ body {
 }
 
 .App {
-  width: 70%;
-  margin-left: 15%;
+  width: 100vw;
+  /* margin-left: 15%; */
   display: flex;
-  flex-flow: wrap;
+  /* flex-flow: wrap; */
   justify-content: center;
   align-content: center;
   align-items: center;
